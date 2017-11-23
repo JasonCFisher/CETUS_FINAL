@@ -5,7 +5,6 @@ shortDesc=Southern edge of the forest.
 visited=0
 Item01=altFor1Tree
 Item02=altWoodpile
-Item03=Axe
 adj0=altForest2 
 adj1=altCem2
 adj2=NULL

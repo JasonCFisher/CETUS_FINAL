@@ -6,6 +6,7 @@ visited=0
 Item01=normAltar
 Item02=normIdol
 Item03=Tome
+Item04=Ritual
 adj0=normHidOrnateHall
 adj1=NULL
 adj2=NULL
