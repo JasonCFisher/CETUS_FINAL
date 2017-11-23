@@ -1,0 +1,9 @@
+ID=altWindow
+Name=Window
+roomDescription=There is a window at the end or the hall
+Description=The window looks out into the back grounds of the property.  You can see strange, inhuman shapes moving out there.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

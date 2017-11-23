@@ -1,0 +1,9 @@
+ID=altFor2Thicket
+Name=Thicket
+roomDescription=The other side of the trail is bordered by a dense thicket.
+Description=The thicket is made up of vines and shrubs with huge, nasty looking thorns.  You can see hideous skulls trapped in the interwoven branches.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

@@ -1,0 +1,9 @@
+ID=Lead Pipe
+Name=Lead Pipe
+roomDescription=A lead pipe is laying on the ground.
+Description=A short length of rusty lead pipe.  It has some decent weight to it.
+Power=4
+Healing=0
+weapon=1
+roomFeature=0
+collectible=1

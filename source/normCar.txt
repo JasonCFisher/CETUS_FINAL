@@ -1,0 +1,9 @@
+ID=normCar
+Name=Car
+roomDescription=A few cars are parked along the side of the street.
+Description=A few bodies are thrown up against the cars.  It looks like some people were trying to get in the cars and get away.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

@@ -1,0 +1,9 @@
+ID=normFor2Marks
+Name=Markings
+roomDescription=You see some sort of strange markings in the loose dirt of the path ahead.
+Description=The markings twist back and forth in a line in front of you.  They almost look like a snake trail, if that snake were about three feet wide. 
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

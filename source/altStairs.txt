@@ -1,0 +1,13 @@
+ID=altStairs
+Name=Stairs
+longDesc=Stairs lead up to the second floor.  The top of the stairs opens to doors on the east and west.  A hallway extends through the second floor to the north.
+shortDesc=The mansion stairs
+visited=0
+Item01=altBannister
+Item02=altSteps
+adj0=altHall
+adj1=NULL
+adj2=altBed2
+adj3=altBed1
+adj4=NULL
+adj5=altFoyer

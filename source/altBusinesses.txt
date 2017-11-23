@@ -1,0 +1,9 @@
+ID=altBusinesses
+Name=Businesses
+roomDescription=The businesses lining the street are whole and undamaged.  However, none of them are open and they don't look like they've been open for some time.
+Description=The businesses look somewhat similar to those you know, but the signs are faded and covered with the same strange writing that seems to twist in your mind as you try to read it.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

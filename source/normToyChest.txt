@@ -1,0 +1,9 @@
+ID=normToyChest
+Name=Toy Chest
+roomDescription=There is a small chest sitting against the wall between the beds.
+Description=The outside of the chest has animals painted on it.  You find old toys inside.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

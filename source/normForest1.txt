@@ -1,0 +1,13 @@
+ID=normForest1
+Name=Forest1
+longDesc=The tree line is especially ominous.  More forest lies to the north.
+shortDesc=Southern edge of the forest.
+visited=0
+Item01=normFor1Tree
+Item02=normFor1Bodies
+adj0=normForest2
+adj1=normCem2
+adj2=NULL
+adj3=NULL
+adj4=NULL
+adj5=NULL

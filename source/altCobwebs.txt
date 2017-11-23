@@ -1,0 +1,9 @@
+ID=altCobwebs
+Name=Cobwebs
+roomDescription=Thick cobwebs hang from the rafters in the ceiling.
+Description=The cobwebs seem to shift as if in a breeze.  The air feels completely still and stifling.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

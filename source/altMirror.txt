@@ -1,0 +1,9 @@
+ID=altMirror
+Name=Mirror
+roomDescription=An old, full length mirror is set against one wall.
+Description=Your reflection in the mirror is distorted and grotesque.  You can almost see things moving in the shadows behind you.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

@@ -1,0 +1,8 @@
+Description=Almost all the businesses are dark and closed for the night.
+Healing=0
+Name=Businesses
+Power=0
+collectible=0
+roomDescription=A few run-down looking businesses are scattered on either side of the street
+roomFeature=1
+weapon=0

@@ -1,0 +1,9 @@
+ID=normBookshelves
+Name=Bookshelves
+roomDescription=Bookshelves line two walls of the library.
+Description=The books on the shelves look old and musty.  There must be at least few here that could be sold to an antiques dealer.  Why would they have been left in the empty house?
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

@@ -1,0 +1,9 @@
+ID=normIdol
+Name=Idol
+roomDescription=A large idol sits just beyond the altar
+Description=The statues depicts a bearded figure with a trident.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

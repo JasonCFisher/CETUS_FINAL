@@ -1,0 +1,13 @@
+ID=normMain
+Name=Main Street
+longDesc=You're standing downtown Schuykill.  The normally bustling town seems emptier than it should.  An eerie quiet sits heavily in the air.
+shortDesc=You're standing in downtown Schuylkill.
+visited=0
+Item01=normBusinesses
+Item02=normCar
+adj0=normChurchyard
+adj1=NULL
+adj2=normEntranceway
+adj3=normBar
+adj4=NULL
+adj5=NULL

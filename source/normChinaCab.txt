@@ -1,0 +1,9 @@
+ID=normChinaCab
+Name=China Cabinet
+roomDescription=A china cabinet sits in one corner of the room.
+Description=Old and dusty china sits in the cabinet.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

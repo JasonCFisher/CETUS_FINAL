@@ -1,0 +1,14 @@
+ID=normBath
+Name=Bath
+longDesc=A small bathroom adjoining the master bedroom of the mansion.
+shortDesc=The mansion bathroom.
+visited=0
+Item01=normTub
+Item02=normBathSink
+Item03=Bandaid
+adj0=NULL
+adj1=normBed1
+adj2=normHall
+adj3=NULL
+adj4=NULL
+adj5=NULL

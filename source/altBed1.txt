@@ -1,0 +1,13 @@
+ID=altBed1
+Name=Bedroom1
+longDesc=The master bedroom of the mansion.
+shortDesc=The master bedroom.
+visited=0
+Item01=altMirror
+Item02=altDoll
+adj0=altBath
+adj1=NULL
+adj2=altStairs
+adj3=NULL
+adj4=NULL
+adj5=NULL

@@ -1,0 +1,13 @@
+ID=altHidStorage
+Name=Storage
+longDesc=A small storage room just off the hallway.  
+shortDesc=A small storage room.
+visited=0
+Item01=altHidChest
+Item02=altHidStorShelves
+adj0=altHidHall
+adj1=NULL
+adj2=NULL
+adj3=NULL
+adj4=NULL
+adj5=NULL

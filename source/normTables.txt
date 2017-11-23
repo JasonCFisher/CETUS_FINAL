@@ -1,0 +1,9 @@
+ID=normTables
+Name=Tables
+roomDescription=Many of the tables are overturned.
+Description=A few of the tables are lying splintered against the wall.  Almost like they were thrown out of the way and hit hard enough to smash.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

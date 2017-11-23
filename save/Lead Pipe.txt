@@ -1,0 +1,8 @@
+Description=A short length of rusty lead pipe.  It has some decent weight to it.
+Healing=0
+Name=Lead Pipe
+Power=4
+collectible=1
+roomDescription=A lead pipe is laying on the ground.
+roomFeature=0
+weapon=1

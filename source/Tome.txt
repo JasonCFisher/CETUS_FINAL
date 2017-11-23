@@ -1,0 +1,9 @@
+ID=Tome
+Name=Tome
+roomDescription= An old, leather-bound book sits open on a pedestal.  
+Description= The legible section of the page reads: "And so we made the deal.  We get a plentiful bounty from the sea every season.  In turn, the creature obtains its prize every 50 years.  This time it was the lady of the mansion.  The townfolk called her an outsider to justify the act.  But what happens when the only the locals are left?"
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

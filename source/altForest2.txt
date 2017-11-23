@@ -1,0 +1,13 @@
+ID=altForest2
+Name=Forest2
+longDesc=The skyline is blocked by the trees, hidden creatures running around your feet. Beady little eyes stare at you.
+shortDesc=Another dark, creepy forest.
+visited=0
+Item01=altFor2Tree
+Item02=altFor2Thicket
+adj0=altForest3 
+adj1=altForest1
+adj2=NULL
+adj3=NULL
+adj4=NULL
+adj5=NULL

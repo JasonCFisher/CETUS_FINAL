@@ -1,0 +1,9 @@
+ID=altCar
+Name=Car
+roomDescription=Cars are parked along the side of the street
+Description=The cars are eerily similar to those from your world, even down to the way that they're parked.  You look in the window of one and see no features that would let someone drive it.  It's almost like someone made the shell of a car in mockery of the real thing.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

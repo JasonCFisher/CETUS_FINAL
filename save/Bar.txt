@@ -1,0 +1,8 @@
+Description=The bar seems like it's lit up and open for business, but you don't see anyone inside.
+Healing=0
+Name=Bar
+Power=0
+collectible=0
+roomDescription=The only place still lit up and open on the entire street is a bar a little down the road.
+roomFeature=1
+weapon=0

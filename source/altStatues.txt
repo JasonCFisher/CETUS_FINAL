@@ -1,0 +1,9 @@
+ID=altStatues
+Name=Statues
+roomDescription=Small stone statues squat on either side of the porch steps.
+Description=The mermaid statues here show no sign of weathering.  The faces of the mermaids are contorted in expressions of horrible anger and hunger, and there fingers grasp like claws at anyone venturing up the steps.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

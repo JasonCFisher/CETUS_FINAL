@@ -1,0 +1,12 @@
+Name=
+longDesc=
+shortDesc=
+visited=
+Item01=
+Item02=
+adj0=
+adj1=
+adj2=
+adj3=
+adj4=
+adj5=

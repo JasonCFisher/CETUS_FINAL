@@ -1,0 +1,9 @@
+ID=altDesk
+Name=Desk
+roomDescription=A small desk is tucked into the far corner of the room
+Description=A gruesome head is set on a spike in the center of the desk.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

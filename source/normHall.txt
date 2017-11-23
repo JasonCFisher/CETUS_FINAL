@@ -1,0 +1,13 @@
+ID=normHall
+Name=Hallway
+longDesc=The second floor hallway.  Doors open on both sides, and the stairs down to the first floor are to the south.
+shortDesc=The second floor hallway
+visited=0
+Item01=normWindow
+Item02=normPainting3
+adj0=NULL
+adj1=normStairs
+adj2=normStorage
+adj3=normBath
+adj4=NULL
+adj5=NULL

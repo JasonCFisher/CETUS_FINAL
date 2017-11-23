@@ -1,0 +1,9 @@
+ID=Molotov
+Name=Molotov Cocktail
+roomDescription= A whiskey bottle, with a bar rag sticking out of it.
+Description= A whiskey bottle, with a bar rag sticking out of it.  Rather painful to use at close range.
+Power=0
+Healing=0
+weapon=0
+roomFeature=0
+collectible=1

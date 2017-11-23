@@ -1,0 +1,13 @@
+ID=altHidEntry
+Name=Hidden Entry
+longDesc=The entrance to a hidden area just off the mansion cellar.  Strangely, the shifting wall colors that looked so wrong in the normal dimension seem right in this dimension.
+shortDesc=The entrance to a hidden area just off the mansion cellar.
+visited=0
+Item01=altMarkings1
+Item02=altTapestry1
+adj0=NULL
+adj1=altHidBeds
+adj2=altHidHall
+adj3=altCellar
+adj4=NULL
+adj5=NULL

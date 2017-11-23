@@ -1,0 +1,9 @@
+ID=altAltar
+Name=Altar
+roomDescription=A large alter sits in the center of the room.
+Description=The altar is stained with old blood.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

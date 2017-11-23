@@ -1,0 +1,9 @@
+ID=altShelves
+Name=Shelves
+roomDescription=There are shelves on one wall of the room.
+Description=Old bones have been lain out on each shelf.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

@@ -1,0 +1,13 @@
+ID=normEntranceway
+Name=Entranceway
+longDesc=The driveway curving up toward the old mansion in the north would make for a pleasant walk if it weren't for the dire circumstances you find yourself in.
+shortDesc=The driveway of an old mansion.
+visited=0
+Item01=normMansGate
+Item02=normBarnFeat
+adj0=normMansion
+adj1=NULL
+adj2=normMain
+adj3=normBarn
+adj4=NULL
+adj5=NULL

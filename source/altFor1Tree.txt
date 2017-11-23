@@ -1,0 +1,9 @@
+ID=altFor1Tree
+Name=Tree
+roomDescription=An old, gnarled tree stands just off the side of the path.
+Description=As you get closer, you realize that this is like no tree you've seen before.  The limbs are twisted into each other in patterns that hurt your eyes, and the bark has the color of a desicated corpse.  There seems to be a small hollow midway up the trunk.  
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

@@ -1,0 +1,9 @@
+ID=altSeats
+Name=Seats
+roomDescription=Seats are set up at the bar and around the tables like usual, but there seems to be something odd about them.
+Description=You look closer at the seats, and something nags at your mind.  They don't look quite right.  Almost as if they were made to be sat on by creatures that don't have legs.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0
