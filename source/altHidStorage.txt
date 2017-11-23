@@ -5,6 +5,7 @@ shortDesc=A small storage room.
 visited=0
 Item01=altHidChest
 Item02=altHidStorShelves
+Item03=Axe
 adj0=altHidHall
 adj1=NULL
 adj2=NULL

@@ -52,7 +52,7 @@ World* loadhelper(World* current){
     while(1){
         cout << "\nPlease pick a number:\n1. Load from Save.\n2. Load New Game.\nAny other number to cancel load.\nEnter your choice: ";
         cin >> choice;
-        
+
         switch(choice){
             case 1:
                 return loadWorld("save");
@@ -69,7 +69,7 @@ World* loadhelper(World* current){
     }
 }
 void helper(){
-    
+
     //cout << yellow;
     string spacer = "\t\t\t\t\t\t\t[";
     cout << "\nCommand Help List\n----------------------------------------------------------------------------------\n";
@@ -86,7 +86,7 @@ void helper(){
     cout << "Loadgame" << "\t\t\t\t\t\t[" << "Loads last saved state.]\n";
     cout << "----------------------------------------------------------------------------------\n";
     //cout << reset;
-    
+
 }
 
 void mapMaker(std::map<std::string, int> *map){
@@ -125,11 +125,11 @@ void mapMaker(std::map<std::string, int> *map){
 }
 
 void displayRoom(World* world, int look){
-	
-	cout << cyan; 
+
+	cout << cyan;
     Player* player = world->getPlayer();
     string temp;
-    
+
     cout << "\n" << player->getCurrentRoom()->getName() << std::endl << std::endl;
     if((player->getCurrentRoom()->getVisited()==true) && (look==0)){
         player->getCurrentRoom()->getShort();
@@ -137,22 +137,22 @@ void displayRoom(World* world, int look){
         player->getCurrentRoom()->getLong();
         player->getCurrentRoom()->setVisited(true);
     }
-    
-    
+
+
     world->printRoomInventory();//Prints room description of items under room appearance paragraph
-    
-    
+
+
     if(player->getCurrentRoom()->hasEnemy()){
         std::cout <<"\n\n";
-        player->getCurrentRoom()->getEnemy()->getRoomDesc();
+        player->getCurrentRoom()->getEnemy()->getDesc();
     } else {
         cout << "\n";
     }
-    
+
     std::cout << "\nExits:\n";
     world->printAllAdjacent();
-    
-    
+
+
     std::cout << "\n";
 	cout << reset;
 }
@@ -164,7 +164,7 @@ void verbFinder(std::map<std::string, int> mymap, string* verb, bool*foundVerb, 
         *verb = first;
         *found = true;
     }
-    
+
     return;
 }
 
@@ -180,14 +180,14 @@ Creature* enemySearch(Player* player, bool* found, bool* foundEnemy, const strin
 }
 
 void checkPlayerInv(World* world, bool *foundNoun1, bool* foundNoun2, bool* found, bool* foundInv, Item* noun1, Item* noun2, const string first){
-    
+
 	Item* temp = nullptr;
 	if (world->findItem(first,0) != nullptr){
-	
-		temp = world->findItem(first,0); 
-	
+
+		temp = world->findItem(first,0);
+
 	}
-	
+
     if(temp != nullptr){
 		//cout << temp->getName();
         if(!(*foundNoun1)){
@@ -196,7 +196,7 @@ void checkPlayerInv(World* world, bool *foundNoun1, bool* foundNoun2, bool* foun
             *noun1 = *temp;
             *foundInv = true;
             *found=true;
-			
+
         } else {
             //printf("Found a second noun match!\n");
             *foundNoun2=true;
@@ -264,9 +264,9 @@ string nameDirectionChecker(Player* player, string name, bool* found, bool* foun
             break;
         default:
             verb = "";
-            
+
     }
-    
+
     return verb;
 }
 
@@ -279,14 +279,18 @@ string useSpecifier(bool *foundNoun1, bool *foundNoun2, bool *found, bool *found
     } else if(noun1->getName() == "Bandaid" || noun1->getName()== "Salve"){
         verb = "apply";
     }
-    
+
     return verb;
 }
 
 
+void randomEnemyGenerator(Room* currentRoom, int act) {
+    return;
+}
+
 int parser(World* world){
-    
-    
+
+
     //create variables to simulate a room, actions, items, etc
     std::string input, first, verb, prev, combo;
     Item* noun1 = new Item;
@@ -296,18 +300,18 @@ int parser(World* world){
     Player* player = world->getPlayer();
     std::map<std::string, int> mymap;
     mapMaker(&mymap);
-    
+
     std::stringstream sstream;
     displayRoom(world, 0);
-    
+
     while(1){
-        
+
         sstream.str("");
         sstream.clear();
         first.clear();
         verb.clear();
         combo.clear();
-        
+
         choice = -1;
         bool foundVerb = false;
         bool foundEnemy = false;
@@ -318,28 +322,28 @@ int parser(World* world){
         bool foundRoom = false;
         bool found=false;
         bool selfFlag = false;
-        
+
         printf("\nWhat are you going to do?\n");
-        
+
         //Parse the input
-        
+
         input.clear();
         std::cin.seekg(0,std::ios::end);
         std::cin.clear();
-        
-        
+
+
         std::getline(std::cin, input);
-        
+
         //move to uppercase for matching purposes
         for(int i=0; i<input.size(); i++){
             input.at(i) = std::tolower(input.at(i));
         }
         sstream.str(input);
-        
+
         //Look through all words for key verbs or nouns
         while(sstream >> first){
             found = false;
-            
+
             //special case "self"
             if(first == "self"){
                     selfFlag = true;
@@ -350,97 +354,97 @@ int parser(World* world){
                 withFlag = true;
                 found = true;
             }
-            
+
             //check for special case "look at"
             if(verb == "look" && first == "at"){
                 verb="look_at";
                 found = true;
                 foundVerb = true;
             }
-            
+
             //check for special case "pick up"
             if(prev == "pick" && first == "up"){
                 verb="pick up";
                 found = true;
                 foundVerb = true;
             }
-            
+
             if(!foundVerb && !found){
                 verbFinder(mymap, &verb, &foundVerb, &found, first);
             }
             if(!foundVerb && !found){
                verb = nameDirectionChecker(player, first, &found, &foundVerb);
             }
-            
-            
+
+
             //search for enemy
             if(!found && (verb == "look_at" || verb=="attack") && !foundEnemy && player->getCurrentRoom()->hasEnemy()){
                 baddie = enemySearch(player, &found, &foundEnemy, first);
-                
+
             }
-            
+
             //search player inventory
             if(!found && !player->invIsEmpty()){
                 checkPlayerInv(world, &foundNoun1, &foundNoun2, &found, &foundInv, noun1, noun2, first);
 			}
-            
+
             //search room inventory
             if(!found && !player->getCurrentRoom()->invIsEmpty()){
-                
+
 				checkRoomInv(world, &foundNoun1, &foundNoun2, &found, &foundRoom, noun1, noun2, first);
-                
+
             }
-            
+
             if(!found && (prev.empty() == false) ){
                 combo = prev + " " + first;
-                
+
                 //look for two word action
                 if(!found && !foundVerb){
                     verbFinder(mymap, &verb, &foundVerb, &found, combo);
-                    
+
                 }
                 if(!foundVerb && !found){
                     verb = nameDirectionChecker(player, combo, &found, &foundVerb);
                 }
-                
+
                 //search for enemy
                 if(!found && (verb == "look_at" || verb=="attack") && !foundEnemy && player->getCurrentRoom()->hasEnemy()){
                     baddie = enemySearch(player, &found, &foundEnemy, combo);
-                    
+
                 }
-                
+
                 //search player inventory
                 if(!found && !player->invIsEmpty()){
                     checkPlayerInv(world, &foundNoun1, &foundNoun2, &found, &foundInv, noun1, noun2, combo);
                 }
-                
+
                 //search room inventory
                 if(!found && !player->getCurrentRoom()->invIsEmpty()){
                     checkRoomInv(world, &foundNoun1, &foundNoun2, &found, &foundRoom, noun1, noun2, combo);
-                    
+
                 }
-                
+
             }
-            
-            
+
+
             if(!found ){
                 prev=first;
             } else {
                 prev.clear();
             }
-            
-            
+
+
         }
-        
+
         if(verb=="use"){
             verb = useSpecifier(&foundNoun1, &foundNoun2, &found, &foundRoom, &foundInv, &foundEnemy, noun1, noun2, combo, baddie);
         }
-        
+
         if(mymap.count(verb) > 0){
-            
+
             choice = mymap.find(verb)->second;
         }
-        
+
         switch(choice){
             case 0:  //Quit game
 				cout << yellow;
@@ -459,7 +463,7 @@ int parser(World* world){
                     cout <<"\nWhy would you attack yourself?\n";
                 } else {
                     cout << "What do you want to attack?\n";
-                    
+
                 }
 				cout << reset;
                 break;
@@ -475,7 +479,7 @@ int parser(World* world){
                     displayRoom(world, 0);
                 }
                 break;
-                
+
             case 4:  //East, e
                 if(world->move(2)){
                     randomEnemyGenerator(world->getCurrentRoom(), world->getAct());
@@ -532,23 +536,22 @@ int parser(World* world){
             case 13:  //Look
                 //Display the correct room description.
                 displayRoom(world, 1);
-                
+
                 break;
             case 14:  //Look At
 		cout << yellow;
-                
+
 		if(foundNoun1){
                     	cout << noun1->getDescription() << "\n";
 			cout << noun1->getName() << endl;}
                 if(!(world->actController(noun1->getName()))){
                         cout << noun1->getDescription() << "\n";
-                    }
                 }else if(foundEnemy){
                     baddie->getDesc();
                 } else {
                     cout << "I don't know what you want to look at.\n";
                 }
-				
+
 				cout << reset;
                 break;
             case 15: //Drop
@@ -574,8 +577,8 @@ int parser(World* world){
                 std::cout << "I don't know what you are asking for.\n";
         }
     }
-    
+
     return 0;
-    
-    
+
+
 }
