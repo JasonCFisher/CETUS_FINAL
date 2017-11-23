@@ -17,7 +17,7 @@
 **Pre-Condition:  File exists and correct fileName is passed to function
 **Post-Condition:  Map containing the source file data returned
 **
-**Code for parsing source file input from 
+**Code for parsing source file input from
 **https://stackoverflow.com/questions/31103883/reading-key-value-pairs-from-a-file-and-ignoring-comment-lines
 ****************************************************************************/
 std::map<std::string, std::string> loadFile(std::string fileName) {
@@ -103,7 +103,7 @@ Item* loadItem(std::string location) {
 
 	tempMap = loadFile(location);//load file data into tempMap
 
-	Item* tempItem = new Item(tempMap["ID"], tempMap["Name"], tempMap["Description"], tempMap["roomDescription"], std::stoi(tempMap["Power"]), std::stoi(tempMap["Healing"]), 
+	Item* tempItem = new Item(tempMap["ID"], tempMap["Name"], tempMap["Description"], tempMap["roomDescription"], std::stoi(tempMap["Power"]), std::stoi(tempMap["Healing"]),
 		std::stoi(tempMap["weapon"]), std::stoi(tempMap["roomFeature"]), std::stoi(tempMap["collectible"]));
 
 	std::cout << tempItem->getID() << " Loaded" << std::endl;
@@ -236,7 +236,7 @@ Player* loadPlayer(std::string location, const std::map<std::string, Room*> *roo
 
 /***************************************************************************
 **Function:  loadWorld
-**Description:  Control function to create World object, load all data for world from 
+**Description:  Control function to create World object, load all data for world from
 **		files, and return World object to game engine
 **Parameters:  std::string location
 **Pre-Condition:  .txt source files exist
@@ -264,22 +264,22 @@ World* loadWorld(std::string location) {
 
 	//create array holding list of all Item files
 	//Update this list
-    std::string itemList[] = {"Lead Pipe.txt", "normBusinesses.txt", "normCar.txt", "altBusinesses.txt", "altCar.txt", "normBarBodies.txt", "normTables.txt", 
-		"altTables.txt", "altSeats.txt", "normChurchSign.txt", "normChurchGate.txt", "altChurchSign.txt", "altChurchGate.txt", "normChurchBodies.txt", 
-		"normPulpit.txt", "altPews.txt", "altStainedGlass.txt", "normGravestone.txt", "normGrave.txt", "altGravestone.txt", "altGrave.txt", "normStonewall.txt", 
-		"normMausoleum.txt", "altStonewall.txt", "altMausoleum.txt", "normFor1Tree.txt", "normFor1Bodies.txt", "altFor1Tree.txt", "altWoodpile.txt", 
-		"normFor2Tree.txt", "normFor2Marks.txt", "altFor2Tree.txt", "altFor2Thicket.txt", "normCliff.txt", "normOcean.txt", "altCliff.txt", "altOcean.txt", 
-		"normMansGate.txt", "normBarnFeat.txt", "altMansGate.txt", "altBarnFeat.txt", "normTools.txt", "normBench.txt", "altTools.txt", "altBench.txt", 
-		"normStatues.txt", "normPorchSteps.txt", "altStatues.txt", "altPorchSteps.txt", "normPainting1.txt", "normPainting2.txt", "altPainting1.txt", 
-		"altPainting2.txt", "normBookshelves.txt", "normDesk.txt", "altBookshelves.txt", "altDesk.txt", "normFridge.txt", "normCounter.txt", "altFridge.txt", 
-		"altCounter.txt", "normTable.txt", "normChinaCab.txt", "altTable.txt", "altChinaCab.txt", "normServBeds.txt", "normBoxes.txt", "altServBeds.txt", 
-		"altBoxes.txt", "normTV.txt", "normFireplace.txt", "altTV.txt", "altFireplace.txt", "normBannister.txt", "normSteps.txt", "altBannister.txt", "altSteps.txt", 
-		"normMirror.txt", "normDoll.txt", "altMirror.txt", "altDoll.txt", "normTub.txt", "normBathSink.txt", "altTub.txt", "altBathSink.txt", "normWindow.txt", 
-		"normPainting3.txt", "altWindow.txt", "altPainting3.txt", "normShelves.txt", "normMop.txt", "altShelves.txt", "altMop.txt", "normKidsBed.txt", 
-		"normToyChest.txt", "altKidsBed.txt", "altToyChest.txt", "normWineRack.txt", "normDistDust.txt", "altCobwebs.txt", "altWineRack.txt", "normMarkings1.txt", 
-		"normScorchMarks1.txt", "altMarkings1.txt", "altTapestry1.txt", "normMarkings2.txt", "normScorchMarks2.txt", "altMarkings2.txt", "altTapestry2.txt", 
-		"normMarkings3.txt", "normHidOrnStatues.txt", "altMarkings3.txt", "altHidOrnStatues.txt", "normAltar.txt", "normIdol.txt", "altAltar.txt", "altIdol.txt", 
-		"normCobwebs.txt", "normHidStorShelves.txt", "altHidStorShelves.txt", "altHidChest.txt", "normCultBeds.txt", "normCultChests.txt", "altCultBeds.txt", 
+    std::string itemList[] = {"Lead Pipe.txt", "normBusinesses.txt", "normCar.txt", "altBusinesses.txt", "altCar.txt", "normBarBodies.txt", "normTables.txt",
+		"altTables.txt", "altSeats.txt", "normChurchSign.txt", "normChurchGate.txt", "altChurchSign.txt", "altChurchGate.txt", "normChurchBodies.txt",
+		"normPulpit.txt", "altPews.txt", "altStainedGlass.txt", "normGravestone.txt", "normGrave.txt", "altGravestone.txt", "altGrave.txt", "normStonewall.txt",
+		"normMausoleum.txt", "altStonewall.txt", "altMausoleum.txt", "normFor1Tree.txt", "normFor1Bodies.txt", "altFor1Tree.txt", "altWoodpile.txt",
+		"normFor2Tree.txt", "normFor2Marks.txt", "altFor2Tree.txt", "altFor2Thicket.txt", "normCliff.txt", "normOcean.txt", "altCliff.txt", "altOcean.txt",
+		"normMansGate.txt", "normBarnFeat.txt", "altMansGate.txt", "altBarnFeat.txt", "normTools.txt", "normBench.txt", "altTools.txt", "altBench.txt",
+		"normStatues.txt", "normPorchSteps.txt", "altStatues.txt", "altPorchSteps.txt", "normPainting1.txt", "normPainting2.txt", "altPainting1.txt",
+		"altPainting2.txt", "normBookshelves.txt", "normDesk.txt", "altBookshelves.txt", "altDesk.txt", "normFridge.txt", "normCounter.txt", "altFridge.txt",
+		"altCounter.txt", "normTable.txt", "normChinaCab.txt", "altTable.txt", "altChinaCab.txt", "normServBeds.txt", "normBoxes.txt", "altServBeds.txt",
+		"altBoxes.txt", "normTV.txt", "normFireplace.txt", "altTV.txt", "altFireplace.txt", "normBannister.txt", "normSteps.txt", "altBannister.txt", "altSteps.txt",
+		"normMirror.txt", "normDoll.txt", "altMirror.txt", "altDoll.txt", "normTub.txt", "normBathSink.txt", "altTub.txt", "altBathSink.txt", "normWindow.txt",
+		"normPainting3.txt", "altWindow.txt", "altPainting3.txt", "normShelves.txt", "normMop.txt", "altShelves.txt", "altMop.txt", "normKidsBed.txt",
+		"normToyChest.txt", "altKidsBed.txt", "altToyChest.txt", "normWineRack.txt", "normDistDust.txt", "altCobwebs.txt", "altWineRack.txt", "normMarkings1.txt",
+		"normScorchMarks1.txt", "altMarkings1.txt", "altTapestry1.txt", "normMarkings2.txt", "normScorchMarks2.txt", "altMarkings2.txt", "altTapestry2.txt",
+		"normMarkings3.txt", "normHidOrnStatues.txt", "altMarkings3.txt", "altHidOrnStatues.txt", "normAltar.txt", "normIdol.txt", "altAltar.txt", "altIdol.txt",
+		"normCobwebs.txt", "normHidStorShelves.txt", "altHidStorShelves.txt", "altHidChest.txt", "normCultBeds.txt", "normCultChests.txt", "altCultBeds.txt",
 		"altCultChests.txt", "Tome.txt", "Axe.txt", "Bandaid.txt", "Salve.txt", "Trident.txt", "Molotov.txt", "Lighter.txt", "Rag.txt", "Whiskey.txt"};
 	//create Item objects and store pointers in map
 	for (int x = 0; x < itemNum; x++) {
@@ -293,13 +293,13 @@ World* loadWorld(std::string location) {
 
 	//create array holding list of all Room files
 	//Update this list
-    std::string roomList[] = {"normMain.txt", "normBar.txt", "normChurchyard.txt", "normChurch.txt", "normCem1.txt", "normCem2.txt", "normForest1.txt", 
-		"normForest2.txt", "normForest3.txt", "normEntranceway.txt", "normBarn.txt", "normMansion.txt", "normFoyer.txt", "normLibrary.txt", "normKitchen.txt", 
-		"normDiningRm.txt", "normServant.txt", "normLivingRm.txt", "normStairs.txt", "normBed1.txt", "normBath.txt", "normHall.txt", "normStorage.txt", 
-		"normBed2.txt", "normCellar.txt", "normHidEntry.txt", "normHidHall.txt", "normHidOrnateHall.txt", "normLair.txt", "normHidStorage.txt", "normHidBeds.txt", 
-		"altMain.txt", "altBar.txt", "altChurchyard.txt", "altChurch.txt", "altCem1.txt", "altCem2.txt", "altForest1.txt", 
-		"altForest2.txt", "altForest3.txt", "altEntranceway.txt", "altBarn.txt", "altMansion.txt", "altFoyer.txt", "altLibrary.txt", "altKitchen.txt", 
-		"altDiningRm.txt", "altServant.txt", "altLivingRm.txt", "altStairs.txt", "altBed1.txt", "altBath.txt", "altHall.txt", "altStorage.txt", 
+    std::string roomList[] = {"normMain.txt", "normBar.txt", "normChurchyard.txt", "normChurch.txt", "normCem1.txt", "normCem2.txt", "normForest1.txt",
+		"normForest2.txt", "normForest3.txt", "normEntranceway.txt", "normBarn.txt", "normMansion.txt", "normFoyer.txt", "normLibrary.txt", "normKitchen.txt",
+		"normDiningRm.txt", "normServant.txt", "normLivingRm.txt", "normStairs.txt", "normBed1.txt", "normBath.txt", "normHall.txt", "normStorage.txt",
+		"normBed2.txt", "normCellar.txt", "normHidEntry.txt", "normHidHall.txt", "normHidOrnateHall.txt", "normLair.txt", "normHidStorage.txt", "normHidBeds.txt",
+		"altMain.txt", "altBar.txt", "altChurchyard.txt", "altChurch.txt", "altCem1.txt", "altCem2.txt", "altForest1.txt",
+		"altForest2.txt", "altForest3.txt", "altEntranceway.txt", "altBarn.txt", "altMansion.txt", "altFoyer.txt", "altLibrary.txt", "altKitchen.txt",
+		"altDiningRm.txt", "altServant.txt", "altLivingRm.txt", "altStairs.txt", "altBed1.txt", "altBath.txt", "altHall.txt", "altStorage.txt",
 		"altBed2.txt", "altCellar.txt", "altHidEntry.txt", "altHidHall.txt", "altHidOrnateHall.txt", "altLair.txt", "altHidStorage.txt", "altHidBeds.txt"};
 	//create Room objects and store pointers in map
 	for (int x = 0; x < roomNum; x++) {
@@ -337,6 +337,7 @@ World* loadWorld(std::string location) {
 	gameWorld->setDescription(tempMap["Description"]);
 	gameWorld->setPlayer(curPlayer);
 	gameWorld->setRealWorld(std::stoi(tempMap["realWorld"]));
+	gameWorld->setAct(std::stoi(tempMap["act"]));
 	gameWorld->createRooms(rmVect);
 
 	//Populate world with listed items
@@ -509,6 +510,7 @@ void saveWorld(World *gameState) {
 	tempMap["Name"]=gameState->getName();
 	tempMap["Description"]=gameState->getDescription();
 	tempMap["realWorld"]=std::to_string(gameState->getRealWorld());
+	tempMap["act"]=std::to_string(gameState->getAct());
 	saveFile(saveLocation, tempMap);
 
 	//Save room data

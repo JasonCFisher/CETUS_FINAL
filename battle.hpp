@@ -9,7 +9,7 @@
 #include "ghost.hpp"
 #include "merman.hpp"
 #include "cultist.hpp"
-#include "cetus.hpp"
+//#include "cetus.hpp"
 #include "CETUS_Player.hpp"
 #include "CETUS_Room.hpp"
 #include "CETUS_World.hpp"

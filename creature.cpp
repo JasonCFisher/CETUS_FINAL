@@ -20,11 +20,11 @@ using std::string;
  *********************************************************************/
 
 Creature::Creature(int arm, int str, string word){
-    
+
     this->armor = arm;
     this->health = str;
     this->name = word;
-    
+
 }
 
 /*********************************************************************
@@ -35,22 +35,22 @@ Creature::Creature(int arm, int str, string word){
  ** Post-Conditions: Object destroyed
  *********************************************************************/
 Creature::~Creature(){
-    
+
 }
 
 
 /*********************************************************************
  ** Function: attack
- ** Description: Virtual function, generates random attack value.  
- **              
+ ** Description: Virtual function, generates random attack value.
+ **
  ** Parameters: None
  ** Pre-Conditions: subclass object created
  ** Post-Conditions: returns int value
  *********************************************************************/
 int Creature::attack(){
-    
+
     return rand()%20+1;
-    
+
 }
 
 /*********************************************************************
@@ -61,19 +61,19 @@ int Creature::attack(){
  ** Post-Conditions: creature obtains damage or dodges
  *********************************************************************/
 void Creature::defense(int incoming){
-        
-    
+
+
     //If damage is 0 or less, creature "dodged"
     if(incoming < armor){
         cout << this->name << " dodged the attack!"<< endl;
         return;
     }
-    
+
     //If not dodged, apply damage to creature
     cout << this->name << " took damage!" << endl;
     this->health -= 1;
     return;
-    
+
 }
 
 /*********************************************************************
@@ -84,7 +84,7 @@ void Creature::defense(int incoming){
  ** Post-Conditions: returns bool value of true if dead
  *********************************************************************/
 bool Creature::isDead(int check = 1){
-    
+
     //Checks if creature is dead.  Shows total health left
     if(check != 0){
         cout << this->name << " : " << this->health << " life." << endl;
@@ -116,7 +116,7 @@ void Creature::adjName(string add){
  ** Post-Conditions: returns true or false
  *********************************************************************/
 bool operator==(Creature& left, Creature& right){
-    
+
     return (left.name == right.name);
 }
 
@@ -141,3 +141,14 @@ void Creature::healme(int val){
 int Creature::getHP(){
     return health;
 }
+
+/*********************************************************************
+ ** Function: getDesc
+ ** Description: returns value of desc
+ ** Parameters: none
+ ** Pre-Conditions: none
+ ** Post-Conditions: none
+ *********************************************************************/
+ void Creature::getDesc() {
+    return this->desc;
+ }
