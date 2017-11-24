@@ -1,0 +1,9 @@
+ID=normTable
+Name=Table
+roomDescription=A large, handsomely carved table runs down the center of the room.
+Description=Placemats and settings are laid out on the table.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

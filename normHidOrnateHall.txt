@@ -1,0 +1,13 @@
+ID=normHidOrnateHall
+Name=Ornate Hall
+longDesc=The hallway becomes more and more ornate as it extends to the east.  The feeling of wrongness increases the farther you go to the east, until the very air feels thick and oppressive.
+shortDesc=An ornate hallway under the mansion
+visited=0
+Item01=normMarkings3
+Item02=normHidOrnStatues
+adj0=NULL
+adj1=normLair
+adj2=NULL
+adj3=normHidHall
+adj4=NULL
+adj5=NULL

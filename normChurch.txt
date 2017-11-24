@@ -1,0 +1,13 @@
+ID=normChurch
+Name=Church
+longDesc=An old church, kept up, yet with odd imagery of the sea and tridents.
+shortDesc=An old church with an odd sea motif.
+Item01=normChurchBodies
+Item02=normPulpit
+visited=0
+adj0=NULL
+adj1=NULL
+adj2=normChurchyard
+adj3=NULL
+adj4=NULL
+adj5=NULL
