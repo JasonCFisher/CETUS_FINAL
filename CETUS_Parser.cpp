@@ -135,11 +135,9 @@ void displayRoom(World* world, int look){
         player->getCurrentRoom()->getShort();
     }else {
         player->getCurrentRoom()->getLong();
+        world->printRoomInventory();//Prints room description of items under room appearance paragraph
         player->getCurrentRoom()->setVisited(true);
     }
-
-
-    world->printRoomInventory();//Prints room description of items under room appearance paragraph
 
 
     if(player->getCurrentRoom()->hasEnemy()){
@@ -549,7 +547,7 @@ int parser(World* world){
                 } else {
                     cout << "I don't know what you want to look at.\n";
                 }
-                
+
 
 				cout << reset;
                 break;
