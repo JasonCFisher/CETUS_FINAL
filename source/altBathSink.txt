@@ -1,7 +1,7 @@
 ID=altBathSink
 Name=Sink
 roomDescription=There is a sink on the wall opposite the bath tub.
-Description=You turn on the faucet to splash some water on your face.  It the faucet coughs briefly and spits out a red liquid.
+Description=You turn on the faucet to splash some water on your face.  The faucet coughs briefly and spits out a red liquid.
 Power=0
 Healing=0
 weapon=0

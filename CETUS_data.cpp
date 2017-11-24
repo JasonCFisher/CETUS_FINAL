@@ -247,7 +247,7 @@ World* loadWorld(std::string location) {
 	std::cout << "Entered loadWorld" << std::endl << std::endl;
 
 	//Declare Variables
-	const int itemNum = 134;//set number of item files for array access - Will be 133 with full implementation
+	const int itemNum = 135;//set number of item files for array access - Will be 133 with full implementation
     const int roomNum = 62;//set number of room files for array access
 	Item* tempItem;//will be used to temporarily store created items
 	Room* tempRoom;//will be used to temporarily store created rooms
@@ -280,7 +280,8 @@ World* loadWorld(std::string location) {
 		"normScorchMarks1.txt", "altMarkings1.txt", "altTapestry1.txt", "normMarkings2.txt", "normScorchMarks2.txt", "altMarkings2.txt", "altTapestry2.txt",
 		"normMarkings3.txt", "normHidOrnStatues.txt", "altMarkings3.txt", "altHidOrnStatues.txt", "normAltar.txt", "normIdol.txt", "altAltar.txt", "altIdol.txt",
 		"normCobwebs.txt", "normHidStorShelves.txt", "altHidStorShelves.txt", "altHidChest.txt", "normCultBeds.txt", "normCultChests.txt", "altCultBeds.txt",
-		"altCultChests.txt", "Tome.txt", "Axe.txt", "Bandaid.txt", "Salve.txt", "Trident.txt", "Molotov.txt", "Lighter.txt", "Rag.txt", "Whiskey.txt"};
+		"altCultChests.txt", "Tome.txt", "Axe.txt", "Bandaid.txt", "Salve.txt", "Trident.txt", "Molotov.txt", "Lighter.txt", "Rag.txt", "Whiskey.txt",
+		"Ritual.txt"};
 	//create Item objects and store pointers in map
 	for (int x = 0; x < itemNum; x++) {
 		fileLocation = "./" + location + "/" + itemList[x];

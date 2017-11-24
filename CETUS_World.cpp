@@ -165,7 +165,7 @@ using std::string;
 				tempString = temp->inventory[i]->getName();
 				std::transform(tempString.begin(), tempString.end(), tempString.begin(), ::tolower);
 
-				if (tempString.compare(0, tempString.size() -1, current)){
+				if (!tempString.compare(current)){
 
 					Item* currentItem = temp->inventory[i];
 
@@ -251,24 +251,25 @@ using std::string;
 		return;
 	}
 
-	void World::printInventory(){
-		Player* temp = this->currentPlayer;
-		if (temp->inventory.size() == 0) {
+    void World::printInventory(){
+        Player* temp = this->currentPlayer;
+        if (temp->inventory.size() == 0) {
 
-			cout << "Player has no items in inventory." << endl;
-			return;
-		}
+            cout << "Player has no items in inventory." << endl;
+            return;
+        }
 
-		for (int i = 0; i < temp->inventory.size(); i++){
+        cout << "\nInventory\n" << "---------\n";
+        for (int i = 0; i < temp->inventory.size(); i++){
 
-			if (temp->inventory[i] != NULL){
-				cout << temp->inventory[i]->getName();
-			}
-		}
+            if (temp->inventory[i] != NULL){
+                cout << temp->inventory[i]->getName() << "\n";
+            }
+        }
 
-		return;
+        return;
 
-	}
+    }
 	void World::printRoomInventory(){
 		Player* temp = this->currentPlayer;
 		if (temp->currentRoom->roomItems.size() == 0) {
@@ -528,16 +529,19 @@ void World::incrementAct(){
 
 int World::actController(string item){
 
-    std::string ritualInterrupt = "Shrouded figures surround the altar.  There is a gutteral chanting from all. Taking a few steps further, you see a sphere of mystical energy surrounding the altar.  Walking forward in astonishment, you catch the attention of one of the figures.  When his focus breaks, the sphere shatters into jagged pieces of energy, and creates a vacuum.  Chanting turns to screams and groans as the robed figures start getting sucked in.  Others try to hold on.  You aren't so lucky.  One of the robed figures uses you to work his way toward the door.  You are flung toward the energy vortex, and everything goes dark.";
-    std::string touchAltar = "You touched the altar. Your body fragments as you pass through the dimensional rift.\n";
-    std::string touchBear = "You touched the bear. Your body fragments as you pass through the dimensional rift.\n";
+    std::string ritualInterrupt = "Shrouded figures surround the altar.  There is a gutteral chanting from all. Taking a few steps further, you see a sphere of mystical energy surrounding the altar.  Walking forward in astonishment, you catch the attention of one of the figures.  When his focus breaks, the sphere shatters into jagged pieces of energy, and creates a vacuum.  Chanting turns to screams and groans as the robed figures start getting sucked in.  Others try to hold on.  You aren't so lucky.  One of the robed figures uses you to work his way toward the door.  You are flung toward the energy vortex, and everything goes dark.\n\nYou wake up groggily with your head pounding.  You open your eyes and see a room that looks wrong.  It seems to be the same room, but the light looks wrong and all the angles seem to be off.  Did something happen when you hit the vortex?";
+    std::string touchAltar = "You touched the altar. Your body fragments as you pass through the dimensional rift.  When the world stops spinning, you're standing in the master bedroom back in the normal dimension.\n";
+    std::string touchBear = "You touched the doll. Your body fragments as you pass through the dimensional rift.  When the world stops spinning, you're standing in the alternate dimension.\n";
     Room* target = NULL;
     int moveAct=0;
     //end of first act
-    if(this->getPlayer()->getCurrentRoom()->getID() == "normLair" && this->getAct() == 1 && item == "Altar"){
+    if(this->getPlayer()->getCurrentRoom()->getID() == "normLair" && this->getAct() == 1 && item == "Ritual"){
         cout << std::endl << ritualInterrupt << endl;
         this->incrementAct();
-        //removeItem(ritual);
+        Item* temp = findRoomItem(item, true);
+		if (temp != NULL){
+			this->addWorldItem(temp);
+		}
         for(int i=0; i< worldRooms.size(); i++){
             if(this->worldRooms[i]->getID() == "altLair"){
                 target = this->worldRooms[i];
@@ -587,5 +591,12 @@ int World::actController(string item){
 
 	void World::setAct(int currentAct) {
         this->act = currentAct;
+	}
+
+    void World::addWorldItem(Item* current){
+
+		this->worldItems.push_back(current);
+		return;
+
 	}
 

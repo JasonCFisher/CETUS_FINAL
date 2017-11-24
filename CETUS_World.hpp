@@ -59,5 +59,6 @@ class World {
 		int	createItems(std::vector <Item*> itemVect);
 		std::vector<Item*> getItems();
 		void setAct(int currentAct);
+		void addWorldItem(Item* current);
 };
 #endif

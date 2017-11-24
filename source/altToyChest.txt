@@ -1,6 +1,6 @@
 ID=altToyChest
 Name=Toy Chest
-roomDescription=There is a small chest sitting against the wall between the beds.
+roomDescription=There is a small toy chest sitting against the wall between the beds.
 Description=The animals painted on the outside of this chest are snarling with bloody teeth.  You decide you don't want to know what's inside it.
 Power=0
 Healing=0
