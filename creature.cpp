@@ -142,13 +142,4 @@ int Creature::getHP(){
     return health;
 }
 
-/*********************************************************************
- ** Function: getDesc
- ** Description: returns value of desc
- ** Parameters: none
- ** Pre-Conditions: none
- ** Post-Conditions: none
- *********************************************************************/
- void Creature::getDesc() {
-    return this->desc;
- }
+

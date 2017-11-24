@@ -1,6 +1,21 @@
-all: main.cpp Data.o List.o Items.o Player.o Room.o World.o Parser.o battle.o
+all: main.cpp Data.o List.o Items.o Player.o Room.o World.o Parser.o battle.o creature.o cetus.o ghost.o cultist.o  merman.o
 	
-	g++ -std=c++11 -o cetus main.cpp CETUS_World.o CETUS_data.o CETUS_List.o CETUS_Items.o CETUS_Player.o CETUS_Room.o CETUS_Parser.o battle.o  
+	g++ -std=c++11 -o cetus main.cpp CETUS_World.o CETUS_data.o CETUS_List.o CETUS_Items.o CETUS_Player.o CETUS_Room.o CETUS_Parser.o battle.o creature.o cetus.o ghost.o cultist.o  merman.o
+
+creature.o: creature.cpp
+	g++ -c creature.cpp -std=c++11
+
+cetus.o: cetus.cpp
+	g++ -c cetus.cpp -std=c++11
+
+ghost.o: ghost.cpp
+	g++ -c ghost.cpp -std=c++11	
+
+cultist.o: cultist.cpp
+	g++ -c cultist.cpp -std=c++11
+
+merman.o: merman.cpp
+	g++ -c merman.cpp -std=c++11
 
 battle.o: battle.cpp
 	g++ -c battle.cpp -std=c++11
