@@ -1,6 +1,6 @@
 
-#ifndef Ghost_creature
-#define Ghost_creature
+#ifndef cetus_creature
+#define cetus_creature
 
 #include <string>
 #include <cmath>
@@ -9,16 +9,16 @@
 #include "creature.hpp"
 
 
-class Ghost: public Creature{
+class Cetus: public Creature{
 private:
 	
     
 public:
-    Ghost();
+    Cetus();
     int attack();
     string getName();
     void getDesc();
-    
+    void getRoomDesc();
 };
 
 #endif 

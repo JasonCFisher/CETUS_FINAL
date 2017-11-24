@@ -5,7 +5,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
-#include "ghost.hpp"
+#include "cetus.hpp"
 
 using std::cout;
 using std::cin;
@@ -14,13 +14,13 @@ using std::string;
 
 
 /*********************************************************************
- ** Function: Ghost()
+ ** Function: Cetus()
  ** Description: calls base class constructor, then also sets additional value
  ** Parameters: none
  ** Pre-Conditions: subclass object created
  ** Post-Conditions: subclass member variables set
  *********************************************************************/
-Ghost::Ghost(): Creature(3,1, "ghost"){
+Cetus::Cetus(): Creature(5,1, "cetus"){
     
 }
 
@@ -32,9 +32,9 @@ Ghost::Ghost(): Creature(3,1, "ghost"){
  ** Pre-Conditions: subclass object created
  ** Post-Conditions: returns int value
  *********************************************************************/
-int Ghost::attack(){
+int Cetus::attack(){
     
-    return rand()%20+1 + 2;
+    return rand()%20+1 + 3;
 
     
 }
@@ -42,12 +42,12 @@ int Ghost::attack(){
 
 /*********************************************************************
  ** Function: getName()
- ** Description: returns name of Ghost object
+ ** Description: returns name of Cetus object
  ** Parameters: none
  ** Pre-Conditions: subclass object created
  ** Post-Conditions: string name returned
  *********************************************************************/
-string Ghost::getName(){
+string Cetus::getName(){
     return this->name;
 }
 
@@ -58,11 +58,27 @@ string Ghost::getName(){
  ** Pre-Conditions: none
  ** Post-Conditions: none
  *********************************************************************/
-void Ghost::getDesc(){
+void Cetus::getDesc(){
     if(this->isDead(0)){
-        cout << "A pile of ectoplasmic goo lies at your feet." << endl;
+        cout << "No trace of the monster exists."<< endl;
     } else{
-        cout << "A raging Ghost stares at you ready to strike!" << endl;
+        cout << "This beast towers over you.  Tentacles emerge from its face, its big toothy maw grinding and snarling.  Spines and scales cover its body.  Quite a nasty piece of work." << endl;
+    }
+    return;
+}
+
+/*********************************************************************
+ ** Function: getRoomDesc()
+ ** Description: returns description
+ ** Parameters: none
+ ** Pre-Conditions: none
+ ** Post-Conditions: none
+ *********************************************************************/
+void Cetus::getRoomDesc(){
+    if(this->isDead(0)){
+        cout << "No trace of the monster is found."<< endl;
+    } else{
+        cout << "A mythical sea beast with tentacles towers over you, making horrid noises." << endl;
     }
     return;
 }

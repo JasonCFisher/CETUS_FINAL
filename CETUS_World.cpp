@@ -165,7 +165,7 @@ using std::string;
 				tempString = temp->inventory[i]->getName();
 				std::transform(tempString.begin(), tempString.end(), tempString.begin(), ::tolower);
 
-				if (tempString.compare(0, tempString.size() -1, current)){
+				if (!tempString.compare(current)){
 
 					Item* currentItem = temp->inventory[i];
 
@@ -251,24 +251,25 @@ using std::string;
 		return;
 	}
 
-	void World::printInventory(){
-		Player* temp = this->currentPlayer;
-		if (temp->inventory.size() == 0) {
-
-			cout << "Player has no items in inventory." << endl;
-			return;
-		}
-
-		for (int i = 0; i < temp->inventory.size(); i++){
-
-			if (temp->inventory[i] != NULL){
-				cout << temp->inventory[i]->getName();
-			}
-		}
-
-		return;
-
-	}
+    void World::printInventory(){
+        Player* temp = this->currentPlayer;
+        if (temp->inventory.size() == 0) {
+            
+            cout << "Player has no items in inventory." << endl;
+            return;
+        }
+        
+        cout << "\nInventory\n" << "---------\n";
+        for (int i = 0; i < temp->inventory.size(); i++){
+            
+            if (temp->inventory[i] != NULL){
+                cout << temp->inventory[i]->getName() << "\n";
+            }
+        }
+        
+        return;
+        
+    }
 	void World::printRoomInventory(){
 		Player* temp = this->currentPlayer;
 		if (temp->currentRoom->roomItems.size() == 0) {
@@ -534,7 +535,7 @@ int World::actController(string item){
     Room* target = NULL;
     int moveAct=0;
     //end of first act
-    if(this->getPlayer()->getCurrentRoom()->getID() == "normLair" && this->getAct() == 1 && item == "Altar"){
+    if(this->getPlayer()->getCurrentRoom()->getID() == "normLair" && this->getAct() == 1 && item == "Ritual"){
         cout << std::endl << ritualInterrupt << endl;
         this->incrementAct();
         //removeItem(ritual);

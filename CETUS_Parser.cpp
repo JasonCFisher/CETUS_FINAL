@@ -21,9 +21,9 @@
 #include "CETUS_Player.hpp"
 #include "CETUS_Room.hpp"
 #include "CETUS_data.hpp"
-#include "CETUS_World.hpp"
-#include "creature.hpp"
-#include "ghost.hpp"
+//#include "CETUS_World.hpp"
+//#include "creature.hpp"
+//#include "ghost.hpp"
 #include "battle.hpp"
 #include "CETUS_Print.hpp"
 
@@ -283,11 +283,11 @@ string useSpecifier(bool *foundNoun1, bool *foundNoun2, bool *found, bool *found
     return verb;
 }
 
-
+/*
 void randomEnemyGenerator(Room* currentRoom, int act) {
     return;
 }
-
+*/
 int parser(World* world){
 
 
@@ -539,18 +539,17 @@ int parser(World* world){
 
                 break;
             case 14:  //Look At
-		cout << yellow;
-
-		if(foundNoun1){
-                    	cout << noun1->getDescription() << "\n";
-			cout << noun1->getName() << endl;}
-                if(!(world->actController(noun1->getName()))){
+                cout << yellow;
+                if(foundNoun1){
+                    if(!(world->actController(noun1->getName()))){
                         cout << noun1->getDescription() << "\n";
+                    }
                 }else if(foundEnemy){
                     baddie->getDesc();
                 } else {
                     cout << "I don't know what you want to look at.\n";
                 }
+                
 
 				cout << reset;
                 break;
@@ -558,9 +557,11 @@ int parser(World* world){
 				cout << yellow;
                 if(foundInv && foundNoun1){
                     world->dropItem(noun1->getName());
+                    cout << "\nYou drop a " << noun1->getName() << "\n";
                 } else {
                     cout << "I don't see that in your inventory.\n";
                 }
+                cout << reset;
                 break;
             case 16: //heal, apply
                 if(foundInv && foundNoun1 && (noun1->getHealing() > 0)){
