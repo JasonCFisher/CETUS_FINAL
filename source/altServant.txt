@@ -1,7 +1,7 @@
 ID=altServant
 Name=Servant Quarters
-longDesc=A small room off the dining room where the servants slept
-shortDesc=The mansion servant quarters
+longDesc=A small room off the dining room where the servants slept.
+shortDesc=The mansion servant quarters.
 visited=0
 Item01=altServBeds
 Item02=altBoxes

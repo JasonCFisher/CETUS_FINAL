@@ -1,5 +1,5 @@
 ID=altCounter
-Name=Counter
+Name=Countertop
 roomDescription=There is a short countertop on one wall.
 Description=Several eggs are fried onto the surface of the counter top.
 Power=0

@@ -1,5 +1,5 @@
 ID=altPainting2
-Name=Painting
+Name=East Painting
 roomDescription=A painting hangs on the east wall.
 Description=The ocean in this seascape is blood red.  You can see strange things floating in the water.
 Power=0
