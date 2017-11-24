@@ -169,16 +169,7 @@ int main() {
 	World* gameWorld;
     gameWorld = loadWorld("source");
 	gameWorld->ClearScreen();
-	string intro = "Welcome to the CETUS CMD1 Midpoint demonstration! Today, you will be able to see our data parser, command parser and data structures in action; however, full functionality won't be available at this time. Some features that will be coming soon include: \n-Save option\n-Scary creatures and other unknown entities\n-Combat system\n-World flipping alternate dimensions\n-Additional items and rooms\n-Plot enhancements & more!\n";
-    string* temp = &intro;
-
     gameWorld->printLogo();
-    gameWorld->cetusPrint(temp, 3);
-	std::cout << gameWorld->getName() << std::endl;
-	std::cout << gameWorld->getDescription() << std::endl;
-	std::cout << gameWorld->getRealWorld() << std::endl << std::endl;
-
-	//saveWorld(gameWorld);
 
     parser(gameWorld);
 

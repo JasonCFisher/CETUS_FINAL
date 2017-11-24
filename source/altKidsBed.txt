@@ -1,5 +1,5 @@
 ID=altKidsBed
-Name=Kids Bed
+Name=Beds
 roomDescription=There are two beds in this room.
 Description=The beds are covered with bloody sheets, and you can see two small unmoving lumps underneath the sheets.
 Power=0
