@@ -1,5 +1,5 @@
 ID=normServBeds
-Name=Servant Beds
+Name=Beds
 roomDescription=There are a couple beds in the room.
 Description=The beds are old, small, and narrow.
 Power=0

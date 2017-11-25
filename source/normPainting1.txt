@@ -1,5 +1,5 @@
 ID=normPainting1
-Name=Painting
+Name=West Painting
 roomDescription=A painting hangs on the west wall.
 Description=It depicts fishermen on a small boat.
 Power=0

@@ -1,5 +1,5 @@
 ID=normPainting2
-Name=Painting
+Name=East Painting
 roomDescription=A painting hangs on the east wall.
 Description=This painting is a seascape depicting a storm tossed ocean.
 Power=0
