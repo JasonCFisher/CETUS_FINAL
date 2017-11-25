@@ -1,7 +1,7 @@
 ID=normBench
 Name=Work Bench
 roomDescription=A work bench sits under the peg board.
-Description=A few little things that Amy was working on are still on the work bench.
+Description=There are a few odds and ends on the work bench.  Nothing really useful.
 Power=0
 Healing=0
 weapon=0
