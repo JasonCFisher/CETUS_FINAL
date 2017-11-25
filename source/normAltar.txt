@@ -1,6 +1,6 @@
 ID=normAltar
 Name=Altar
-roomDescription=A large alter sits in the center of the room.
+roomDescription=A large altar sits in the center of the room.
 Description=The altar is stained with old blood.  A strange glow seems to emanate from it.
 Power=0
 Healing=0

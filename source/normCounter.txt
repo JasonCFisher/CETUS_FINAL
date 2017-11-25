@@ -1,5 +1,5 @@
 ID=normCounter
-Name=Counter
+Name=Countertop
 roomDescription=There is a short countertop on one wall.
 Description=The countertop is so clean you could fry an egg on it.
 Power=0

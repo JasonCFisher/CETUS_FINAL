@@ -1,6 +1,6 @@
 ID=normKitchen
 Name=Kitchen
-longDesc=The mansion kitchen.  Numerous cupboards line the walls.  A large oven is at the north side of the room.  A door on the west wall leads down a stairwell to the cellar.
+longDesc=The mansion kitchen.  A door on the west wall leads down a stairwell to the cellar.
 shortDesc=The mansion kitchen.
 visited=0
 Item01=normFridge

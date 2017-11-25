@@ -1,7 +1,7 @@
 ID=Ritual
 Name=Ritual
-roomDescription=You see a cluster of robed figures around the alter
-Description=The greater good!
+roomDescription=You see a cluster of robed figures conducting some sort of ritual around the altar.
+Description=The greater good.
 Power=0
 Healing=0
 weapon=0
