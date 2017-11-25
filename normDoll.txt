@@ -1,9 +1,0 @@
-ID=normDoll
-Name=Doll
-roomDescription=An old doll is sitting on the bed.
-Description=It's Amy's doll from when she was a child.  It's obviously well loved.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

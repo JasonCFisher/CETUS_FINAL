@@ -1,9 +1,0 @@
-ID=normChurchGate
-Name=Church Gate
-roomDescription=The wrought-iron gate allowing entrance to the cemetery stands open.
-Description=Looking closer, you see that the gate isn't just open.  It's been mostly torn off its hinges.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

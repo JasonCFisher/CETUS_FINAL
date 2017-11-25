@@ -1,9 +1,0 @@
-ID=normFor1Tree
-Name=Tree
-roomDescription=An old, gnarled tree stands just off the side of the path.
-Description=The tree looks halfway rotted.  There seems to be a small hollow midway up the trunk.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

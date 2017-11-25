@@ -60,5 +60,7 @@ class World {
 		std::vector<Item*> getItems();
 		void setAct(int currentAct);
 		void addWorldItem(Item* current);
+    Item* findWorldItem(string, bool);
+    void destroyItem(string); //takes item from inventory and places into world inventory
 };
 #endif

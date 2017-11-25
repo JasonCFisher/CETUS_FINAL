@@ -1,9 +1,0 @@
-ID=normFor1Bodies
-Name=Bodies
-roomDescription=You see a few bodies lying on the path in front of you.
-Description=The bodies are badly mutilated and look as if they were dragged here.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

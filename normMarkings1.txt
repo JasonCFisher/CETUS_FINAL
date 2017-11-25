@@ -1,9 +1,0 @@
-ID=normMarkings1
-Name=Markings
-roomDescription=Strange markings have been chiseled into the wall.
-Description=The markings are in a language you can't understand.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

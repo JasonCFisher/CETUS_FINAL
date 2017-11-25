@@ -65,13 +65,17 @@ void Creature::defense(int incoming){
 
     //If damage is 0 or less, creature "dodged"
     if(incoming < armor){
-        cout << this->name << " dodged the attack!"<< endl;
+        if(this->armor == 1000){
+            cout << "\nThe attack had no effect.  The hide seems impenetrable.  If only there were a weakness.\n";
+        } else {
+            cout << this->name << " dodged the attack!"<< endl;
+        }
         return;
     }
 
     //If not dodged, apply damage to creature
     cout << this->name << " took damage!" << endl;
-    this->health -= 1;
+    this->health -= rand()%incoming+1;
     return;
 
 }

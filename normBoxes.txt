@@ -1,9 +1,0 @@
-ID=normBoxes
-Name=Boxes
-roomDescription=A few boxes are sitting against one wall
-Description=You recognize some of Amy's equipment in one of the boxes.  She must not have had a chance to unpack it all.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

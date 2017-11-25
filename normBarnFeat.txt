@@ -1,9 +1,0 @@
-ID=normBarnFeat
-Name=Barn
-roomDescription=The old barn stands solidly on the west side of the driveway.
-Description=The barn has seen better days, but its bones still look good.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

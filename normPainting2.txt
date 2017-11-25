@@ -1,9 +1,0 @@
-ID=normPainting2
-Name=East Painting
-roomDescription=A painting hangs on the east wall.
-Description=This painting is a seascape depicting a storm tossed ocean.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

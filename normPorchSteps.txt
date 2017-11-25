@@ -1,9 +1,0 @@
-ID=normPorchSteps
-Name=Steps
-roomDescription=A small flight of steps lead up to the porch.
-Description=The steps creak and groan as you put your weight on them.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0
