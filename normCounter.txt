@@ -1,9 +1,0 @@
-ID=normCounter
-Name=Countertop
-roomDescription=There is a short countertop on one wall.
-Description=The countertop is so clean you could fry an egg on it.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

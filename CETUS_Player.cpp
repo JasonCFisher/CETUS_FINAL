@@ -102,7 +102,7 @@ int Player::resurrectPlayer(Room* current){
 int Player::damagePlayer(int damage){
     
     this->health -= damage;
-
+    cout << "You took " << damage << " damage.\n"  << "You have " << this->health << " life.\n";
     if(this->health < 0){
         
         this->health = 0;

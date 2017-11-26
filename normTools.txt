@@ -1,9 +1,0 @@
-ID=normTools
-Name=Tools
-roomDescription=A few tools are hanging from a peg board on the far wall
-Description=The tools hanging here are pretty light.  Nothing heavy enough for you to do damage with.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

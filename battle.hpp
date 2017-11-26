@@ -14,7 +14,8 @@
 #include "CETUS_Room.hpp"
 #include "CETUS_World.hpp"
 
-void battle(Player *p1, Creature* c2, int modifier);
+int battle(Player *p1, Creature* c2, int modifier, int escaping);
 void randomEnemyGenerator(Room*, int);
+void throwMolotov(World*);
 void gameEnd();
 #endif

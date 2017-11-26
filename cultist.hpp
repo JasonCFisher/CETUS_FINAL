@@ -19,6 +19,8 @@ public:
     string getName();
     void getDesc();
     void getRoomDesc();
+    void setBurned();
+    int getBurned();
 };
 
 #endif 

@@ -18,7 +18,9 @@ public:
     int attack();
     string getName();
     void getDesc();
-    
+    void getRoomDesc();
+    void setBurned();
+    int getBurned();
 };
 
 #endif 

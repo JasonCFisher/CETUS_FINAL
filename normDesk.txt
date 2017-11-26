@@ -1,9 +1,0 @@
-ID=normDesk
-Name=Desk
-roomDescription=A small desk is tucked into the far corner of the room
-Description=Pens, pencils, stationary.  There's nothing useful here.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

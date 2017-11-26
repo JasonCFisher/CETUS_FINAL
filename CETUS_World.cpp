@@ -336,6 +336,7 @@ using std::string;
                     temp->setCurrentRoom(temp->currentRoom->neighbors->north);
                     temp->setNeighbors(temp->currentRoom->getNeighbors());
                     moveFlag=1;
+                    this->getPlayer()->incrementMoves();
                 } else {
                     printf("\nThere is no apparent exit in that direction.\n");
                 }
@@ -346,6 +347,7 @@ using std::string;
                     temp->setCurrentRoom(temp->currentRoom->neighbors->south);
                     temp->setNeighbors(temp->currentRoom->getNeighbors());
                     moveFlag=1;
+                    this->getPlayer()->incrementMoves();
                 } else {
                     printf("\nThere is no apparent exit in that direction.\n");
                 }
@@ -356,6 +358,7 @@ using std::string;
                     temp->setCurrentRoom(temp->currentRoom->neighbors->east);
                     temp->setNeighbors(temp->currentRoom->getNeighbors());
                     moveFlag=1;
+                    this->getPlayer()->incrementMoves();
                 } else {
                     printf("\nThere is no apparent exit in that direction.\n");
                 }
@@ -366,6 +369,7 @@ using std::string;
                     temp->setCurrentRoom(temp->currentRoom->neighbors->west);
                     temp->setNeighbors(temp->currentRoom->getNeighbors());
                     moveFlag=1;
+                    this->getPlayer()->incrementMoves();
                 } else {
                     printf("\nThere is no apparent exit in that direction.\n");
                 }
@@ -376,6 +380,7 @@ using std::string;
                     temp->setCurrentRoom(temp->currentRoom->neighbors->up);
                     temp->setNeighbors(temp->currentRoom->getNeighbors());
                     moveFlag=1;
+                    this->getPlayer()->incrementMoves();
                 } else {
                     printf("\nThere is no apparent exit in that direction.\n");
                 }
@@ -386,6 +391,7 @@ using std::string;
                     temp->setCurrentRoom(temp->currentRoom->neighbors->down);
                     temp->setNeighbors(temp->currentRoom->getNeighbors());
                     moveFlag=1;
+                    this->getPlayer()->incrementMoves();
                 } else {
                     printf("\nThere is no apparent exit in that direction.\n");
                 }
@@ -599,4 +605,42 @@ int World::actController(string item){
 		return;
 
 	}
+
+Item* World::findWorldItem(string current, bool drop){
+    
+    string tempString;
+    std::transform(current.begin(), current.end(), current.begin(), ::tolower);
+    
+    for (int i = 0; i < worldItems.size(); i++){
+        
+        tempString = worldItems[i]->getName();
+        std::transform(tempString.begin(), tempString.end(), tempString.begin(), ::tolower);
+        
+        if (!tempString.compare(current)){
+            
+            Item* currentItem = worldItems[i];
+            
+            if(drop == true){
+                worldItems.erase(worldItems.begin()+i);
+            }
+            
+            return currentItem;
+        }
+        
+    }
+    
+    return NULL;
+    
+}
+void World::destroyItem(string current){
+        
+        Item* temp = findItem(current, true);
+        if (temp != NULL){
+            this->addWorldItem(temp);
+        }
+        
+        return;
+    }
+    
+
 

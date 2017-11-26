@@ -1,9 +1,0 @@
-ID=
-Name=
-roomDescription=
-Description=
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

@@ -27,10 +27,12 @@ public:
     virtual bool isDead(int);
     virtual void adjName(string);
     virtual void getDesc() = 0;
+    virtual void getRoomDesc() = 0;
     friend bool operator==(Creature&, Creature&);
     virtual void healme(int);
     virtual int getHP();
-    
+    virtual void setBurned() = 0;
+    virtual int getBurned() = 0;
 };
 
 #endif 

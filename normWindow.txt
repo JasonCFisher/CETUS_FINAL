@@ -1,9 +1,0 @@
-ID=normWindow
-Name=Window
-roomDescription=There is a window at the end or the hall
-Description=The window looks out into the back grounds of the property.  Everything is dark and still.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

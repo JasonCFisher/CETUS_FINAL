@@ -5,34 +5,37 @@ using std::cout;
 using std::endl;
 using std::string;
 
-void battle(Player *p1, Creature* c2, int modifier){
+int battle(Player *p1, Creature* c2, int modifier, int escaping){
     int atkValue;
-    int ignore = 0;
-    
-    while (ignore < 1){
+
+    if(!escaping){
         cout << "You attack!" << endl;
         atkValue = rand()%20+1+modifier;
         c2->defense(atkValue);
         
-        if(c2->isDead(1)){
+        if(c2->isDead(0)){
             cout << endl << "The " << c2->getName() << " was defeated!" << endl;
             if(c2->getName() == "cetus"){
                 gameEnd();
             }
-            return;
+            return 1;
         }
-        
+    }
         cout << endl << "The " << c2->getName() << " attacks!" << endl;
         atkValue = c2->attack();
         if(atkValue > 12){
-        	p1->damagePlayer(10);
+        	p1->damagePlayer(rand()%5+(atkValue/2));
+        } else {
+            cout << "Its attack missed!\n";
         }
         
         if(p1->getHealth() <= 0){
             cout << "You died!" << endl;
-            return;
+            cout << "The world swirls about you and goes black.  You thought you had something important to do, but the recollection fades.  You realize your eyes were closed, which was bad, since you were driving.  \"I must need some sleep\" you think as you continue.  As if in response, a sign appears from around a turn, \"Schuykill - 5 miles\".\n";
+            
+            return 0;
         }
-    }
+    return 1;
 }
 
 
@@ -76,6 +79,14 @@ void makeMolotov(World* world){
         world->findItem("whiskey",1);
         
     }
+}
+
+void throwMolotov(World* world){
+    std::string thrownMolotov = "\n\nWith a might hurl, the bottle flips end over end toward the creature.  With the barely audible cracking of glass, fire jumps across the alcohol and onto the creature.  It's less than impressive - for a second.  With insane speed, the flame spread, almost unnaturally, across the creature's form.  Then *poof* gone.  The creature looks weakened from the exposure.\n";
+    cout << thrownMolotov;
+    world->getCurrentRoom()->getEnemy()->setBurned();
+    world->destroyItem("Molotov Cocktail");
+    return;
 }
 
 void gameEnd(){

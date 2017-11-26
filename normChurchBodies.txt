@@ -1,9 +1,0 @@
-ID=normChurchBodies
-Name=Bodies
-roomDescription=A few bodies are strewn among the pews.
-Description=It looks like these people tried to hide in the church, for all the good that did them.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

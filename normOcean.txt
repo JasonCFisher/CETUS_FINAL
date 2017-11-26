@@ -1,9 +1,0 @@
-ID=normOcean
-Name=Ocean
-roomDescription=You can see the ocean past the drop off.
-Description=The moon hangs over the sea as the waves crash against rocks at the bottom of the cliff.  It would be peaceful if it weren't for the horrors you've already seen.
-Power=0
-Healing=0
-weapon=0
-roomFeature=1
-collectible=0

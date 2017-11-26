@@ -20,7 +20,7 @@ using std::string;
  ** Pre-Conditions: subclass object created
  ** Post-Conditions: subclass member variables set
  *********************************************************************/
-Merman::Merman(): Creature(5,1, "merman"){
+Merman::Merman(): Creature(10,10, "merman"){
     
 }
 
@@ -83,4 +83,9 @@ void Merman::getRoomDesc(){
     return;
 }
 
-
+void Merman::setBurned(){
+    return;
+}
+int Merman::getBurned(){
+    return -1;
+}
