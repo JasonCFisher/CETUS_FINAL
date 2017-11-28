@@ -130,6 +130,7 @@ void mapMaker(std::map<std::string, int> *map){
     map->insert (std::pair<std::string, int>("use", 20));
     map->insert (std::pair<std::string, int>("status", 21));
 	map->insert (std::pair<std::string, int>("touch", 22));
+    map->insert (std::pair<std::string, int>("check", 23));
     return;
 }
 
@@ -456,6 +457,14 @@ int parser(World* world){
         if(verb=="use"){
             verb = useSpecifier(&foundNoun1, &foundNoun2, &found, &foundRoom, &foundInv, &foundEnemy, noun1, noun2, combo, baddie);
         }
+        
+        if(verb == "check"){
+            if(foundInv && foundNoun1 && noun1->getName == "Phone"){
+                verb = "check";
+            } else {
+                verb = "inspect";
+            }
+        }
 
         if(mymap.count(verb) > 0){
 
@@ -759,6 +768,11 @@ int parser(World* world){
 
 
 				cout << reset;
+                break;
+            case 23:
+                if(foundInv && foundNoun1 && noun1->getName="Phone"){
+                    getVoicemails();
+                }
                 break;
             default:
                 std::cout << "I don't know what you are asking for.\n";

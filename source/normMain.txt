@@ -5,6 +5,7 @@ shortDesc=You're standing in downtown Schuylkill.
 visited=0
 Item01=normBusinesses
 Item02=normCar
+Item03=Phone
 adj0=normChurchyard
 adj1=NULL
 adj2=normBar

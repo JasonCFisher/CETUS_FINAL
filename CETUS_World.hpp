@@ -62,5 +62,6 @@ class World {
 		void addWorldItem(Item* current);
     Item* findWorldItem(string, bool);
     void destroyItem(string); //takes item from inventory and places into world inventory
+    void getVoicemails();
 };
 #endif

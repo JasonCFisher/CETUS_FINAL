@@ -247,7 +247,7 @@ World* loadWorld(std::string location) {
 	std::cout << "Entered loadWorld" << std::endl << std::endl;
 
 	//Declare Variables
-	const int itemNum = 138;//set number of item files for array access - Will be 133 with full implementation
+	const int itemNum = 139;//set number of item files for array access - Will be 133 with full implementation
     const int roomNum = 62;//set number of room files for array access
 	Item* tempItem;//will be used to temporarily store created items
 	Room* tempRoom;//will be used to temporarily store created rooms
