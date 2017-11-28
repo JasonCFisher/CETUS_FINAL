@@ -3,3 +3,4 @@ health=100
 movesCompleted=0
 currentRoom=normMain
 specialItemCount=0
+Item01=Phone

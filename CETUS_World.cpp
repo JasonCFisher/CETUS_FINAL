@@ -647,18 +647,91 @@ void World::destroyItem(string current){
         }
         
         return;
+}
+void World::destroyRoomItem(string current){
+    
+    Item* temp = findRoomItem(current, true);
+    if (temp != NULL){
+        this->addWorldItem(temp);
     }
+    
+    return;
+}
     
 void World::getVoicemails(){
     if(this->act == 1){
         cout << "...Dad, I got this great place, the old mansion west of town.  I'll be there when you get in.\n";
     } else if(this->act == 2){
-        cout << "\n...<static>  HELP! <shuffling> <muted talk> Why a chuurch? <static>\n"
+        cout << "\n...<static>  HELP! <shuffling> <muted talk> Why a chuurch? <static>\n";
     } else if (this->act == 3){
         cout << "\nDad....<heavy breathing> Dad...I got away...hiding in my room....Help me please!\n";
     } else {
-        cout << "\nLET GO OF ME!  What do you want from ... <LOUD GROWL!> <SCREAM>\n"
+        cout << "\nLET GO OF ME!  What do you want from ... <LOUD GROWL!> <SCREAM>\n";
     }
     return;
 }
+
+Room* World::findRoom(string ID){
+    
+    for (int i = 0; i < worldRooms.size(); i++){
+        
+        if (worldRooms[i]->getID() == ID){
+            
+            Room* temp = worldRooms[i];
+            return temp;
+        }
+        
+    }
+    
+    return NULL;
+    
+}
+
+void World::openPassage(int step){
+    if(step == 1){
+        Item* tempItem = this->findWorldItem("Block", 1);
+        this->getCurrentRoom()->addItem(tempItem);
+    }
+    else if(step == 2){
+        cout << "\nAs you push the block, it sinks in flush with the wall.  You hear the horrid sounds of stone grinding on stone, and a section of wall opens to the east.\n";
+        Room* temp = findRoom("normHidEntry");
+        this->destroyRoomItem("Block");
+        this->getCurrentRoom()->addNeighbor(2, temp);
+    }
+    return;
+}
+
+int World::checkDir(int dir){
+    switch(dir){
+        case 0:
+            if(this->getCurrentRoom()->getNeighbors()->north != NULL){
+                return 1;
+            } break;
+        case 1:
+            if(this->getCurrentRoom()->getNeighbors()->south != NULL){
+                return 1;
+            } break;
+        case 2:
+            if(this->getCurrentRoom()->getNeighbors()->east != NULL){
+            return 1;
+        } break;
+        case 3:
+            if(this->getCurrentRoom()->getNeighbors()->west != NULL){
+                return 1;
+            } break;
+        case 4:
+            if(this->getCurrentRoom()->getNeighbors()->up != NULL){
+                return 1;
+            } break;
+        case 5:
+            if(this->getCurrentRoom()->getNeighbors()->down != NULL){
+                return 1;
+            } break;
+        default: return 0;
+    }
+    return 0;
+            
+            
+    }
+
 

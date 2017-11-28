@@ -1,0 +1,9 @@
+ID=Block
+Name=Block
+roomDescription= An odd block is sticking out further than the rest.
+Description= The block matches the rest of the cellar wall construction, other than it sticking out from the wall an extra inch.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

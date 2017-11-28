@@ -131,6 +131,7 @@ void mapMaker(std::map<std::string, int> *map){
     map->insert (std::pair<std::string, int>("status", 21));
 	map->insert (std::pair<std::string, int>("touch", 22));
     map->insert (std::pair<std::string, int>("check", 23));
+    map->insert (std::pair<std::string, int>("push", 24));
     return;
 }
 
@@ -459,7 +460,7 @@ int parser(World* world){
         }
         
         if(verb == "check"){
-            if(foundInv && foundNoun1 && noun1->getName == "Phone"){
+            if(foundInv && foundNoun1 && noun1->getName() == "Phone"){
                 verb = "check";
             } else {
                 verb = "inspect";
@@ -665,7 +666,10 @@ int parser(World* world){
                 break;
             case 14:  //Look At
                 cout << yellow;
-                if(foundNoun1){
+                if(foundNoun1 && world->getCurrentRoom()->getID() == "normCellar" && noun1->getID() == "normDistDust" && !world->checkDir(3)){
+                    cout << noun1->getDescription() << "\n";
+                    world->openPassage(1);
+                }else if(foundNoun1){
                     if(!(world->actController(noun1->getName(), "Look"))){
                         cout << noun1->getDescription() << "\n";
                     }
@@ -770,10 +774,29 @@ int parser(World* world){
 				cout << reset;
                 break;
             case 23:
-                if(foundInv && foundNoun1 && noun1->getName="Phone"){
-                    getVoicemails();
+                if(foundInv && foundNoun1 && noun1->getName()=="Phone"){
+                    world->getVoicemails();
                 }
                 break;
+            case 24:
+                if(foundRoom && foundNoun1 && noun1->getName() == "Block"){
+                    world->openPassage(2);
+                } else if(foundEnemy){
+                    if(world->getCurrentRoom()->hasEnemy() && !world->getCurrentRoom()->getEnemy()->isDead(0)){
+                        if(battle(player, world->getCurrentRoom()->getEnemy(), 0, 1)==0){
+                            world = loadhelper(world);
+                            if(world!=NULL){
+                                player = world->getPlayer();
+                            } else {
+                                cout << "Error loading game!\n";
+                            }
+                            break;
+                        }
+                    } else { cout << "Pushing a corpse?  Tough guy...\n";}
+                    
+                } else if(foundNoun1) { cout << "Nothing happens.\n";
+                } else { cout << "I don't know what you are wanting to push.\n";
+                }break;
             default:
                 std::cout << "I don't know what you are asking for.\n";
         }
