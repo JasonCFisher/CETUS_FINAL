@@ -533,7 +533,7 @@ void World::incrementAct(){
     this->act++;
 }
 
-int World::actController(string item){
+int World::actController(string item, string action){
 
     std::string ritualInterrupt = "Shrouded figures surround the altar.  There is a gutteral chanting from all. Taking a few steps further, you see a sphere of mystical energy surrounding the altar.  Walking forward in astonishment, you catch the attention of one of the figures.  When his focus breaks, the sphere shatters into jagged pieces of energy, and creates a vacuum.  Chanting turns to screams and groans as the robed figures start getting sucked in.  Others try to hold on.  You aren't so lucky.  One of the robed figures uses you to work his way toward the door.  You are flung toward the energy vortex, and everything goes dark.\n\nYou wake up groggily with your head pounding.  You open your eyes and see a room that looks wrong.  It seems to be the same room, but the light looks wrong and all the angles seem to be off.  Did something happen when you hit the vortex?";
     std::string touchAltar = "You touched the altar. Your body fragments as you pass through the dimensional rift.  When the world stops spinning, you're standing alternate dimension.\n";
@@ -557,7 +557,7 @@ int World::actController(string item){
 
     }
     //going back into bad dimension
-    if(!moveAct && this->getPlayer()->getCurrentRoom()->getID() == "normLair" && this->getAct() >= 2 && item == "Altar"){
+    if(!moveAct && this->getPlayer()->getCurrentRoom()->getID() == "normLair" && this->getAct() >= 2 && item == "Altar" && action == "touch"){
         cout << std::endl << touchAltar << endl;
         for(int i=0; i< worldRooms.size(); i++){
             if(this->worldRooms[i]->getID() == "altLair"){
@@ -570,7 +570,7 @@ int World::actController(string item){
 
 
     //inspecting bear
-    if(!moveAct && this->getPlayer()->getCurrentRoom()->getID() == "altBed1" && this->getAct() >= 2 && item == "Doll"){
+    if(!moveAct && this->getPlayer()->getCurrentRoom()->getID() == "altBed1" && this->getAct() >= 2 && item == "Doll" && action == "touch"){
         cout << std::endl << touchBear << endl;
         for(int i=0; i< worldRooms.size(); i++){
             if(this->worldRooms[i]->getID() == "normBed1"){
@@ -578,10 +578,12 @@ int World::actController(string item){
                 moveAct=1;
             }
         }
-
+		if (this->getAct() == 2) {
+			this->incrementAct();
+		}
     }
 
-	if(!moveAct && this->getPlayer()->getCurrentRoom()->getID() == "altChurch" && this->getAct() == 2 && item == "Windows") {
+	if(!moveAct && this->getPlayer()->getCurrentRoom()->getID() == "altChurch" && this->getAct() == 3 && item == "Windows") {
 		this->incrementAct();
 	}
     if(moveAct){
