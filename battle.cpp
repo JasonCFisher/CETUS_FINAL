@@ -43,7 +43,7 @@ void randomEnemyGenerator(Room* room, int act){
     srand(time(0));
     Creature* newCreat = NULL;
     if(act > 1){
-        if(room->getName() == "Forest3" && room->hasEnemy() == 0 && act==3){
+        if(room->getName() == "Forest3" && room->hasEnemy() == 0 && act==4){
             newCreat = new Cetus();
             room->setEnemy(newCreat);
         } else if(room->hasEnemy()==0 && room->getName()!="forest3" && room->getName() != "lair"){
