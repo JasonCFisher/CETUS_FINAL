@@ -15,7 +15,7 @@ int battle(Player *p1, Creature* c2, int modifier, int escaping){
         
         if(c2->isDead(0)){
             cout << endl << "The " << c2->getName() << " was defeated!" << endl;
-            if(c2->getName() == "cetus"){
+            if(c2->getName() == "Cetus"){
                 gameEnd();
             }
             return 1;
