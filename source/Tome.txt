@@ -1,7 +1,7 @@
 ID=Tome
 Name=Tome
 roomDescription= An old, leather-bound book sits open on a pedestal.  
-Description= The legible section of the page reads: "And so we made the deal.  We get a plentiful bounty from the sea every season.  In turn, the creature obtains its prize every 50 years.  This time it was the lady of the mansion.  The townfolk called her an outsider to justify the act.  But what happens when the only the locals are left?  Should the deal ever go badly, we must look to the dark chapel for the means to conquer Poseidon's wrath."
+Description=The tome was badly damaged when the ritual went wrong.  There are only a few legible sections.  The first legible section reads:  "...and the acolyte shall be initiated into the order by making the crossing.  Once to the dark world of our lord, twice for the return to our world, and thrice back to the dark world to pay homage at the chapel.  The next legible section reads: "And so we made the deal.  We get a plentiful bounty from the sea every season.  In turn, the creature obtains its prize every time the seas turn red."  The final legible section reads:  "...fools cast us out and called us heretics!  They learned the wrath of Poseidon when the time came and there was no offering.  Now we must appease Poseidon with the sacrifice of the woman outsider.  If Poseidon will accept her, then we shall be restored to his grace and the town shall return to the old ways.  If not, we must look to the dark chapel for the means to conquer Poseidon's wrath.  Only those who have been initiated by the crossing can enter the dark chapel."
 Power=0
 Healing=0
 weapon=0

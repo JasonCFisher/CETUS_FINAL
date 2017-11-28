@@ -55,7 +55,7 @@ class World {
 		std::vector<Room*> getRooms();
         int getAct();
         void incrementAct();
-        int actController(string);
+        int actController(string, string);
 		int	createItems(std::vector <Item*> itemVect);
 		std::vector<Item*> getItems();
 		void setAct(int currentAct);

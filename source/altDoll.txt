@@ -1,7 +1,7 @@
 ID=altDoll
 Name=Doll
 roomDescription=Amy's doll is still sitting on the bed.  A strange glow seems to emanate from it.
-Description=You reach out to touch the doll, and the entire world seems to move sideways.  There is an explosion of unreal colors.
+Description=The doll looks just like Amy's, except for that strange glow.
 Power=0
 Healing=0
 weapon=0

@@ -129,6 +129,7 @@ void mapMaker(std::map<std::string, int> *map){
     map->insert (std::pair<std::string, int>("consume", 19));
     map->insert (std::pair<std::string, int>("use", 20));
     map->insert (std::pair<std::string, int>("status", 21));
+	map->insert (std::pair<std::string, int>("touch", 22));
     return;
 }
 
@@ -553,32 +554,38 @@ int parser(World* world){
                 break;
             case 5:  //West, w
             if(world->getCurrentRoom()->hasEnemy() && !world->getCurrentRoom()->getEnemy()->isDead(0)){
-                    if(battle(player, world->getCurrentRoom()->getEnemy(), 0, 1)==0){
-                        world = loadhelper(world);
-                        if(world!=NULL){
-                            player = world->getPlayer();
-                        } else {
-                            cout << "Error loading game!\n";
-                        }
-                        break;
+                if(battle(player, world->getCurrentRoom()->getEnemy(), 0, 1)==0){
+                    world = loadhelper(world);
+                    if(world!=NULL){
+                        player = world->getPlayer();
+                    } else {
+                        cout << "Error loading game!\n";
                     }
+                    break;
                 }
-                if(world->move(3)){
-                    if(world->getCurrentRoom()->hasEnemy() && !world->getCurrentRoom()->getEnemy()->isDead(0)){
-                    if(battle(player, world->getCurrentRoom()->getEnemy(), 0, 1)==0){
-                        world = loadhelper(world);
-                        if(world!=NULL){
-                            player = world->getPlayer();
-                        } else {
-                            cout << "Error loading game!\n";
-                        }
-                        break;
-                    }
-                }
-                    randomEnemyGenerator(world->getCurrentRoom(), world->getAct());
-                    displayRoom(world, 0);
-                }
-                break;
+            }
+			if (world->getAct() < 3 && world->getPlayer()->getCurrentRoom()->getID() == "altChurchyard") {
+				cout << yellow;
+				cout << "A strange force prevents you from opening the door." << endl;
+				cout << reset;
+				break;
+			}
+            if(world->move(3)){
+                if(world->getCurrentRoom()->hasEnemy() && !world->getCurrentRoom()->getEnemy()->isDead(0)){
+					if(battle(player, world->getCurrentRoom()->getEnemy(), 0, 1)==0){
+						world = loadhelper(world);
+						if(world!=NULL){
+							player = world->getPlayer();
+						} else {
+							cout << "Error loading game!\n";
+						}
+                    break;
+					}
+				}
+                randomEnemyGenerator(world->getCurrentRoom(), world->getAct());
+                displayRoom(world, 0);
+            }
+            break;
             case 6:  //Up, u
             if(world->getCurrentRoom()->hasEnemy() && !world->getCurrentRoom()->getEnemy()->isDead(0)){
                     if(battle(player, world->getCurrentRoom()->getEnemy(), 0, 1)==0){
@@ -650,7 +657,7 @@ int parser(World* world){
             case 14:  //Look At
                 cout << yellow;
                 if(foundNoun1){
-                    if(!(world->actController(noun1->getName()))){
+                    if(!(world->actController(noun1->getName(), "Look"))){
                         cout << noun1->getDescription() << "\n";
                     }
                 }else if(foundEnemy){
@@ -737,6 +744,21 @@ int parser(World* world){
             case 21:
                 cout << "\nCurrent Health: " << player->getHealth()<<".\n";
                 cout << "Move Count: " << player->getMovesCompleted() << ".\n";
+                break;
+			case 22:
+                cout << yellow;
+                if(foundNoun1){
+                    if(!(world->actController(noun1->getName(), "touch"))){
+                        cout << "Nothing happens.\n";
+                    }
+                }else if(foundEnemy){
+                    cout << "I don't think that just touching something that is trying to kill you is such a good idea.\n";
+                } else {
+                    cout << "I don't know what you want to touch.\n";
+                }
+
+
+				cout << reset;
                 break;
             default:
                 std::cout << "I don't know what you are asking for.\n";
