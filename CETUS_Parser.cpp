@@ -517,6 +517,17 @@ int parser(World* world){
                 }
                 break;
             case 3:  //South, s
+            if(world->getCurrentRoom()->hasEnemy() && !world->getCurrentRoom()->getEnemy()->isDead(0)){
+                    if(battle(player, world->getCurrentRoom()->getEnemy(), 0, 1)==0){
+                        world = loadhelper(world);
+                        if(world!=NULL){
+                            player = world->getPlayer();
+                        } else {
+                            cout << "Error loading game!\n";
+                        }
+                        break;
+                    }
+                }
                 if(world->move(1)){
                     randomEnemyGenerator(world->getCurrentRoom(), world->getAct());
                     displayRoom(world, 0);
@@ -524,24 +535,79 @@ int parser(World* world){
                 break;
 
             case 4:  //East, e
+            if(world->getCurrentRoom()->hasEnemy() && !world->getCurrentRoom()->getEnemy()->isDead(0)){
+                    if(battle(player, world->getCurrentRoom()->getEnemy(), 0, 1)==0){
+                        world = loadhelper(world);
+                        if(world!=NULL){
+                            player = world->getPlayer();
+                        } else {
+                            cout << "Error loading game!\n";
+                        }
+                        break;
+                    }
+                }
                 if(world->move(2)){
                     randomEnemyGenerator(world->getCurrentRoom(), world->getAct());
                     displayRoom(world, 0);
                 }
                 break;
             case 5:  //West, w
+            if(world->getCurrentRoom()->hasEnemy() && !world->getCurrentRoom()->getEnemy()->isDead(0)){
+                    if(battle(player, world->getCurrentRoom()->getEnemy(), 0, 1)==0){
+                        world = loadhelper(world);
+                        if(world!=NULL){
+                            player = world->getPlayer();
+                        } else {
+                            cout << "Error loading game!\n";
+                        }
+                        break;
+                    }
+                }
                 if(world->move(3)){
+                    if(world->getCurrentRoom()->hasEnemy() && !world->getCurrentRoom()->getEnemy()->isDead(0)){
+                    if(battle(player, world->getCurrentRoom()->getEnemy(), 0, 1)==0){
+                        world = loadhelper(world);
+                        if(world!=NULL){
+                            player = world->getPlayer();
+                        } else {
+                            cout << "Error loading game!\n";
+                        }
+                        break;
+                    }
+                }
                     randomEnemyGenerator(world->getCurrentRoom(), world->getAct());
                     displayRoom(world, 0);
                 }
                 break;
             case 6:  //Up, u
+            if(world->getCurrentRoom()->hasEnemy() && !world->getCurrentRoom()->getEnemy()->isDead(0)){
+                    if(battle(player, world->getCurrentRoom()->getEnemy(), 0, 1)==0){
+                        world = loadhelper(world);
+                        if(world!=NULL){
+                            player = world->getPlayer();
+                        } else {
+                            cout << "Error loading game!\n";
+                        }
+                        break;
+                    }
+                }
                 if(world->move(4)){
                     randomEnemyGenerator(world->getCurrentRoom(), world->getAct());
                     displayRoom(world, 0);
                 }
                 break;
             case 7:  //Down, d
+            if(world->getCurrentRoom()->hasEnemy() && !world->getCurrentRoom()->getEnemy()->isDead(0)){
+                    if(battle(player, world->getCurrentRoom()->getEnemy(), 0, 1)==0){
+                        world = loadhelper(world);
+                        if(world!=NULL){
+                            player = world->getPlayer();
+                        } else {
+                            cout << "Error loading game!\n";
+                        }
+                        break;
+                    }
+                }
                 if(world->move(5)){
                     randomEnemyGenerator(world->getCurrentRoom(), world->getAct());
                     displayRoom(world, 0);
