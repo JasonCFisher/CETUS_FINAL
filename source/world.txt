@@ -2,4 +2,5 @@ Name=world
 Description=This is a test description for the world.
 realWorld=1
 Item01=Molotov
+Item02=Block
 act=1

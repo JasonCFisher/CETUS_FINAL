@@ -531,13 +531,14 @@ int World::getAct(){
 
 void World::incrementAct(){
     this->act++;
+    cout << "\nYour phone gives the audible alert of a new voicemail.\n";
 }
 
 int World::actController(string item, string action){
 
     std::string ritualInterrupt = "Shrouded figures surround the altar.  There is a gutteral chanting from all. Taking a few steps further, you see a sphere of mystical energy surrounding the altar.  Walking forward in astonishment, you catch the attention of one of the figures.  When his focus breaks, the sphere shatters into jagged pieces of energy, and creates a vacuum.  Chanting turns to screams and groans as the robed figures start getting sucked in.  Others try to hold on.  You aren't so lucky.  One of the robed figures uses you to work his way toward the door.  You are flung toward the energy vortex, and everything goes dark.\n\nYou wake up groggily with your head pounding.  You open your eyes and see a room that looks wrong.  It seems to be the same room, but the light looks wrong and all the angles seem to be off.  Did something happen when you hit the vortex?";
     std::string touchAltar = "You touched the altar. Your body fragments as you pass through the dimensional rift.  When the world stops spinning, you're standing alternate dimension.\n";
-    std::string touchBear = "You touched the doll. Your body fragments as you pass through the dimensional rift.  When the world stops spinning, you're standing in the normal dimension.\n";
+    std::string touchDoll = "You touched the doll. Your body fragments as you pass through the dimensional rift.  When the world stops spinning, you're standing in the normal dimension.\n";
     Room* target = NULL;
     int moveAct=0;
     //end of first act
@@ -571,7 +572,7 @@ int World::actController(string item, string action){
 
     //inspecting bear
     if(!moveAct && this->getPlayer()->getCurrentRoom()->getID() == "altBed1" && this->getAct() >= 2 && item == "Doll" && action == "touch"){
-        cout << std::endl << touchBear << endl;
+        cout << std::endl << touchDoll << endl;
         for(int i=0; i< worldRooms.size(); i++){
             if(this->worldRooms[i]->getID() == "normBed1"){
                 target = this->worldRooms[i];
@@ -646,7 +647,91 @@ void World::destroyItem(string current){
         }
         
         return;
+}
+void World::destroyRoomItem(string current){
+    
+    Item* temp = findRoomItem(current, true);
+    if (temp != NULL){
+        this->addWorldItem(temp);
     }
     
+    return;
+}
+    
+void World::getVoicemails(){
+    if(this->act == 1){
+        cout << "...Dad, I got this great place, the old mansion west of town.  I'll be there when you get in.\n";
+    } else if(this->act == 2){
+        cout << "\n...<static>  HELP! <shuffling> <muted talk> Why a chuurch? <static>\n";
+    } else if (this->act == 3){
+        cout << "\nDad....<heavy breathing> Dad...I got away...hiding in my room....Help me please!\n";
+    } else {
+        cout << "\nLET GO OF ME!  What do you want from ... <LOUD GROWL!> <SCREAM>\n";
+    }
+    return;
+}
+
+Room* World::findRoom(string ID){
+    
+    for (int i = 0; i < worldRooms.size(); i++){
+        
+        if (worldRooms[i]->getID() == ID){
+            
+            Room* temp = worldRooms[i];
+            return temp;
+        }
+        
+    }
+    
+    return NULL;
+    
+}
+
+void World::openPassage(int step){
+    if(step == 1){
+        Item* tempItem = this->findWorldItem("Block", 1);
+        this->getCurrentRoom()->addItem(tempItem);
+    }
+    else if(step == 2){
+        cout << "\nAs you push the block, it sinks in flush with the wall.  You hear the horrid sounds of stone grinding on stone, and a section of wall opens to the east.\n";
+        Room* temp = findRoom("normHidEntry");
+        this->destroyRoomItem("Block");
+        this->getCurrentRoom()->addNeighbor(2, temp);
+    }
+    return;
+}
+
+int World::checkDir(int dir){
+    switch(dir){
+        case 0:
+            if(this->getCurrentRoom()->getNeighbors()->north != NULL){
+                return 1;
+            } break;
+        case 1:
+            if(this->getCurrentRoom()->getNeighbors()->south != NULL){
+                return 1;
+            } break;
+        case 2:
+            if(this->getCurrentRoom()->getNeighbors()->east != NULL){
+            return 1;
+        } break;
+        case 3:
+            if(this->getCurrentRoom()->getNeighbors()->west != NULL){
+                return 1;
+            } break;
+        case 4:
+            if(this->getCurrentRoom()->getNeighbors()->up != NULL){
+                return 1;
+            } break;
+        case 5:
+            if(this->getCurrentRoom()->getNeighbors()->down != NULL){
+                return 1;
+            } break;
+        default: return 0;
+    }
+    return 0;
+            
+            
+    }
 
 

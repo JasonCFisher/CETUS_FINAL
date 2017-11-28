@@ -3,7 +3,7 @@
 #include <vector>
 #include "CETUS_Items.hpp"
 #include "creature.hpp"
-
+#include "CETUS_List.hpp"
 #ifndef CETUS_ROOM_HPP
 #define CETUS_ROOM_HPP
 
@@ -35,7 +35,7 @@ class Room {
 		void addDescriptions(string longDesc, string shortDesc);
 		void addItem(Item* current);
 		Item* removeItem(Item* current);
-		//void addNeighbor(int direction, Room* neigbor);
+		void addNeighbor(int direction, Room* neigbor);
 		void createNeighbors(List* neighborList);
 		void getLong();
 		void getShort();
@@ -53,5 +53,6 @@ class Room {
         Creature* getEnemy();
 		void setID(string currentID);
 		string getID();
+ 
 };
 #endif
