@@ -40,6 +40,9 @@ Room.o: CETUS_Room.cpp
 
 Parser.o: CETUS_Parser.cpp
 	g++ -c CETUS_Parser.cpp -std=c++11
+	
+test: CETUS_TEST.cpp World.o Room.o Player.o Items.o List.o
+	g++ -o test CETUS_TEST.cpp CETUS_World.o CETUS_List.o CETUS_Items.o CETUS_Player.o CETUS_Room.o  -std=c++11
 
 clean:
 	$(RM) *.o
