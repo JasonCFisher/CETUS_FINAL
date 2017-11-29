@@ -106,8 +106,6 @@ Item* loadItem(std::string location) {
 	Item* tempItem = new Item(tempMap["ID"], tempMap["Name"], tempMap["Description"], tempMap["roomDescription"], std::stoi(tempMap["Power"]), std::stoi(tempMap["Healing"]),
 		std::stoi(tempMap["weapon"]), std::stoi(tempMap["roomFeature"]), std::stoi(tempMap["collectible"]));
 
-	std::cout << tempItem->getID() << " Loaded" << std::endl;
-
 	return tempItem;
 }
 
@@ -158,8 +156,6 @@ Room* loadRoom(std::string location, std::map<std::string, Item*> itemMap, std::
 
 	adj->insert(std::pair<string, std::vector<std::string>>(tempMap["ID"], list));
 
-	std::cout << tempRoom->getID() << " Loaded" << std::endl;
-
 
 	return tempRoom;
 }
@@ -188,9 +184,7 @@ void loadList(std::map<std::string, std::vector<std::string>> *adj, std::map<std
 		//use ID for adj vector to place correct neighbors into rooms[x]
 		for (int y = 0; y < aI->second.size(); y++) {
 			adjRoom = aI->second[y];//place an adjacent room ID in adjRoom
-			//std::cout << "adjRoom = " << adjRoom << std::endl;
 			if (adjRoom.compare(0, 4, "NULL") != 0) {
-				//std::cout << "in if statement" << std::endl;
 				tempList->addAdjacent(y, roomMap->find(adjRoom)->second);
 			}
 		it->second->createNeighbors(tempList);
@@ -216,7 +210,6 @@ Player* loadPlayer(std::string location, const std::map<std::string, Room*> *roo
 	//call player constructor using tempMap to find current room from map of Room pointers
 	Player* tempPlayer = new Player(rooms->at(tempMap["currentRoom"]), std::stoi(tempMap["health"]), std::stoi(tempMap["movesCompleted"]), std::stoi(tempMap["specialItemCount"]));
 
-	std::cout << "Loading player items now" << std::endl;
 
 	//Populate player inventory with Items
 	//set map iterator to first item in map
@@ -243,8 +236,6 @@ Player* loadPlayer(std::string location, const std::map<std::string, Room*> *roo
 **Post-Condition:  new World object is created and returned
 ****************************************************************************/
 World* loadWorld(std::string location) {
-
-	std::cout << "Entered loadWorld" << std::endl << std::endl;
 
 	//Declare Variables
 	const int itemNum = 140;//set number of item files for array access - Will be 133 with full implementation
@@ -290,8 +281,6 @@ World* loadWorld(std::string location) {
 		itemMap[key] = tempItem;
 	}
 
-	std::cout << "Items created" << std::endl << std::endl;
-
 	//create array holding list of all Room files
 	//Update this list
     std::string roomList[] = {"normMain.txt", "normBar.txt", "normChurchyard.txt", "normChurch.txt", "normCem1.txt", "normCem2.txt", "normForest1.txt",
@@ -310,18 +299,12 @@ World* loadWorld(std::string location) {
 		roomMap[key] = tempRoom;
 	}
 
-	std::cout << "Rooms created" << std::endl << std::endl;
-
 	//Populate Room neighbor Lists
 	loadList(&adj, &roomMap);
-
-	std::cout << "Lists Loaded" << std::endl << std::endl;
 
 	//create Player object
 	fileLocation = "./" + location + "/player.txt";
 	curPlayer = loadPlayer(fileLocation, &roomMap, itemMap);
-
-	std::cout << "Player Loaded" << std::endl << std::endl;
 
 	//place Room objects in vector
 	std::map<std::string, Room*>::iterator i;
@@ -348,12 +331,11 @@ World* loadWorld(std::string location) {
 			std::string itemID = it->second;
 			itemVect.push_back(itemMap[itemID]);
 			it++;
-			std::cout << itemMap[itemID]->getID() << " added to world" << std::endl << std::endl;
 		}
 	}
 	gameWorld->createItems(itemVect);
 
-	std::cout << "gameWorld loaded" << std::endl << std::endl;
+	std::cout << "Game World loaded" << std::endl << std::endl;
 
 	return gameWorld;
 }
@@ -392,7 +374,6 @@ void saveItem(Item *tempItem) {
 **Post-Condition:  new .txt file is created with Room data
 ****************************************************************************/
 void saveRoom(Room *tempRoom) {
-	std::cout << "Creating " << tempRoom->getID() << std::endl;
 
 	std::map <std::string, std::string> tempMap;
 	std::string saveLocation;
@@ -407,8 +388,6 @@ void saveRoom(Room *tempRoom) {
 	tempMap["shortDesc"] = tempRoom->saveShortDesc();
 	tempMap["visited"] = std::to_string(tempRoom->getVisited());
 
-	std::cout << "ID, Name, descriptions, and visited set" << std::endl;
-
 	itemVect = tempRoom->getItems();//get vector of Items in Room
 	for (int i = 1; i <= itemVect.size(); i++) {//initialized i to 1 and used <= to correctly create itemNum for key
 		saveItem(itemVect[i-1]);//save all Items in room as separate .txt file
@@ -418,11 +397,8 @@ void saveRoom(Room *tempRoom) {
 		else {
 			itemNum = "Item" + std::to_string(i);
 		}
-		//std::cout << "itemNum = " << itemNum << std::endl;
 		tempMap[itemNum] = itemVect[i-1]->getID();//set map value to Item ID
 	}
-
-	std::cout << "Items set" << std::endl;
 
 	//get adjacent rooms
 	neighbors = tempRoom->getNeighbors();
@@ -437,12 +413,9 @@ void saveRoom(Room *tempRoom) {
 		}
 	}
 
-	std::cout << "Adjacent Rooms Set" << std::endl;
-
 	saveLocation = "./save/" + tempRoom->getID() + ".txt";
 	saveFile(saveLocation, tempMap);
 
-	std::cout << "Room saved" << std::endl << std::endl;
 }
 
 
@@ -490,8 +463,6 @@ void saveWorld(World *gameState) {
 	std::vector<Item*> itemVect;
 	std::string itemNum;
 
-	std::cout << "Now saving game" << std::endl << std::endl;
-
 	//Save items stored in world object
 	itemVect = gameState->getItems();
 	for (int i = 1; i <= itemVect.size(); i++) {
@@ -504,8 +475,6 @@ void saveWorld(World *gameState) {
 		}
 		tempMap[itemNum] = itemVect[i-1]->getID();//set map value to Item ID
 	}
-
-	std::cout << "Items Saved" << std::endl << std::endl;
 
 	//Place data in map for World attributes and save to file
 	tempMap["Name"]=gameState->getName();
@@ -522,5 +491,7 @@ void saveWorld(World *gameState) {
 
 	//Save player data
 	savePlayer(gameState->getPlayer());
+
+	std::cout << "Game Saved" << std::endl << std::endl;
 
 }
