@@ -5,7 +5,7 @@ using std::endl;
 using std::cout;
 using std::string;
 
-
+class List;
 Room::Room(){
 
 	this->visited = false;
@@ -41,12 +41,12 @@ Item* Room::removeItem(Item* current){
 	
 }
 
-/*void Room::addNeighbor(int direction, Room* neighbor){
+void Room::addNeighbor(int direction, Room* neighbor){
 	
 	this->neighbors->addAdjacent(direction, neighbor);
 	return;
 	
-}*/ //Returning error for using an incomplete type here, may need to move this functionality to the overall world. 
+} //Returning error for using an incomplete type here, may need to move this functionality to the overall world. 
 
 void Room::getLong(){
 
@@ -166,3 +166,4 @@ void Room::setID(string currentName) {
 string Room::getID(){
 	return this->ID;
 }
+
