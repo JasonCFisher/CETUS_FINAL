@@ -77,7 +77,7 @@ void helper(){
     cout << "Status" << spacer << "Shows player stats.]\n";
     cout << "Look" << spacer << "View the room and objects in the current area.]\n";
     cout << "Look At <object>" << "\t\t\t\t\t["  << "Inspect the <object>.]\n";
-	cout << "Touch <object>" <<  "\t\t\t\t\t\t" << "Touch the <object>.]\n";
+	cout << "Touch <object>" <<  "\t\t\t\t\t\t[" << "Touch the <object>.]\n";
     cout << "Eat <object>" << "\t\t\t\t\t\t[" << "Consume <object>. (Choose wisely!)]\n";
     cout << "Attack <target>" << "\t\t\t\t\t\t[" << "Tries to punch <target> with fists.]\n";
     cout << "Attack <target> with <object>\t\t\t\t[" << "Hit <target> with <object>.]\n";
@@ -92,6 +92,7 @@ void helper(){
     cout << "Inventory" << "\t\t\t\t\t\t[" << "Browse contents of inventory.]\n";
     cout << "Savegame" << "\t\t\t\t\t\t[" << "Saves current game progress.]\n";
     cout << "Loadgame" << "\t\t\t\t\t\t[" << "Loads last saved state.]\n";
+    cout << "Scan" << "\t\t\t\t\t\t[" << "Displays list of Item names in a room.]\n";
     cout << "----------------------------------------------------------------------------------\n";
     //cout << reset;
 
@@ -138,6 +139,7 @@ void mapMaker(std::map<std::string, int> *map){
 	map->insert (std::pair<std::string, int>("touch", 22));
     map->insert (std::pair<std::string, int>("check", 23));
     map->insert (std::pair<std::string, int>("push", 24));
+    map->insert (std::pair<std::string, int>("scan", 25));
     return;
 }
 
@@ -803,6 +805,19 @@ int parser(World* world){
                 } else if(foundNoun1) { cout << "Nothing happens.\n";
                 } else { cout << "I don't know what you are wanting to push.\n";
                 }break;
+            case 25:
+                if(world->getCurrentRoom()->getItems().size() == 0){
+                    cout << "No room items found\n";
+                } else {
+                    cout << "\nRoom Items\n----------\n";
+                
+                    for (int i = 0; i < world->getCurrentRoom()->getItems().size(); i++){
+                        
+                        if (world->getCurrentRoom()->getItems()[i] != NULL){
+                            cout << world->getCurrentRoom()->getItems()[i]->getName() << "\n";
+                        }
+                    }
+                } break;
             default:
                 std::cout << "I don't know what you are asking for.\n";
         }
