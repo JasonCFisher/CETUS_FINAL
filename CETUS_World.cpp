@@ -662,9 +662,9 @@ void World::getVoicemails(){
     if(this->act == 1){
         cout << "...Dad, I got this great place, the old mansion west of town.  I'll be there when you get in.\n";
     } else if(this->act == 2){
-        cout << "\n...<static>  HELP! <shuffling> <muted talk> Why a chuurch? <static>\n";
-    } else if (this->act == 3){
         cout << "\nDad....<heavy breathing> Dad...I got away...hiding in my room....Help me please!\n";
+    } else if (this->act == 3){
+        cout << "\n...<static>  HELP! <shuffling> <muted talk> Why a church? <static>\n";
     } else {
         cout << "\nLET GO OF ME!  What do you want from ... <LOUD GROWL!> <SCREAM>\n";
     }
