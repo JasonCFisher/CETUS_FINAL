@@ -1,0 +1,9 @@
+ID=altHidChest
+Name=Chest
+roomDescription=An old chest sits in one corner.
+Description=You go to open the chest and it's hot to the touch.  You hear a horrifying scream off in the distance.  It might be best to leave this alone.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

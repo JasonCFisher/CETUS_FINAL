@@ -1,0 +1,13 @@
+ID=altMansion
+Name=Mansion
+longDesc=The silence seems to press in on you as you stand at the door to the mansion.
+shortDesc=The entrance to the mansion
+visited=0
+Item01=altStatues
+Item02=altPorchSteps
+adj0=altFoyer
+adj1=altEntranceway
+adj2=NULL
+adj3=NULL
+adj4=NULL
+adj5=NULL

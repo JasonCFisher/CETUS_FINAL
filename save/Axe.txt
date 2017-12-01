@@ -1,0 +1,16 @@
+ID=Axe
+Name=Axe
+
+roomDescription=A one-handed axe sits nearby.
+
+Description=A one-handed tactical axe, solid one-piece steel construction, black in color, with a wrapped nylon handle.
+
+Power=6
+
+Healing=0
+
+weapon=1
+
+roomFeature=0
+
+collectible=1

@@ -1,0 +1,9 @@
+ID=altChinaCab
+Name=China Cabinet
+roomDescription=A china cabinet sits in one corner of the room.
+Description=The china inside has been smashed to pieces.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

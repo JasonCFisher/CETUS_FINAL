@@ -1,0 +1,13 @@
+ID=altDiningRm
+Name=Dining Room
+longDesc=The mansion dining room.
+shortDesc=The mansion dining room.
+visited=0
+Item01=altTable
+Item02=altChinaCab
+adj0=NULL
+adj1=altFoyer
+adj2=altServant
+adj3=altKitchen
+adj4=NULL
+adj5=NULL

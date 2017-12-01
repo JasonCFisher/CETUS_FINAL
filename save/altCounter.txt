@@ -1,0 +1,9 @@
+ID=altCounter
+Name=Countertop
+roomDescription=There is a short countertop on one wall.
+Description=Several eggs are fried onto the surface of the counter top.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

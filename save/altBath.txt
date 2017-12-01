@@ -1,0 +1,13 @@
+ID=altBath
+Name=Bath
+longDesc=A small bathroom adjoining the master bedroom of the mansion.
+shortDesc=The mansion bathroom.
+visited=0
+Item01=altTub
+Item02=altBathSink
+adj0=NULL
+adj1=altBed1
+adj2=altHall
+adj3=NULL
+adj4=NULL
+adj5=NULL

@@ -1,0 +1,9 @@
+ID=altChurchSign
+Name=Church Sign
+roomDescription=A small sign sits at the front of the church yard next to the gate.
+Description=As you get closer, you see that the sign is written in the same strange markings as everything else in this world.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

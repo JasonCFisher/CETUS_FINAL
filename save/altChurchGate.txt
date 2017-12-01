@@ -1,0 +1,9 @@
+ID=altChurchGate
+Name=Church Gate
+roomDescription=The wrought-iron gate allowing entrance to the cemetery stands open.
+Description=The iron bars seem to twist into each other like some sort of Escher drawing.  You give the gate an experimental tug and find that the hinges are fused.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

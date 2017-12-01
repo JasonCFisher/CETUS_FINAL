@@ -1,0 +1,9 @@
+ID=altStonewall
+Name=Stonewall
+roomDescription=A low wall of stone separates the cemetery from the forest beyond.
+Description=The wall here is whole, but low enough that you can climb over to get to the forest.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

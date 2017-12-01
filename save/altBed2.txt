@@ -1,0 +1,13 @@
+ID=altBed2
+Name=Bedroom2
+longDesc=The smaller mansion bedroom.  It looks as if children stayed here.
+shortDesc=The second mansion bedroom.
+visited=0
+Item01=altKidsBed
+Item02=altToyChest
+adj0=NULL
+adj1=NULL
+adj2=NULL
+adj3=altStairs
+adj4=NULL
+adj5=NULL

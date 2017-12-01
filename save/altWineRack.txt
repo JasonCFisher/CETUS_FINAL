@@ -1,0 +1,9 @@
+ID=altWineRack
+Name=Wine Rack
+roomDescription=You can see a wine rack in the shadows on the west side of the cellar.
+Description=The wine rack is empty.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

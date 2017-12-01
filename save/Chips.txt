@@ -1,0 +1,9 @@
+ID=Chips
+Name=Chips
+roomDescription=A small bag of chips is sitting out.
+Description=Salt and vinegar.  They look tasty.
+Power=0
+Healing=0
+weapon=0
+roomFeature=0
+collectible=1

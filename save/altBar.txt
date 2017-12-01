@@ -1,0 +1,14 @@
+ID=altBar
+Name=Old Bar
+longDesc=You can't read the name of this dimension's version of Captain Ahab's, but it's in much better shape than the watering hole in your world.  Still, something doesn't seem right about this place.
+shortDesc=An old bar.
+visited=0
+Item01=altTables
+Item02=altSeats
+Item03=Salve
+adj0=NULL
+adj1=NULL
+adj2=NULL
+adj3=altMain
+adj4=NULL
+adj5=NULL
