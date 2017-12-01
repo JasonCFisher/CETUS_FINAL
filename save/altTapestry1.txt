@@ -1,0 +1,9 @@
+ID=altTapestry1
+Name=Tapestry
+roomDescription=A tapestry is hanging on the wall where you saw scorch marks before.
+Description=The tapestry depicts a giant figure with a trident standing in the sea.  His hand is extended offering a cornucopia to a figure on the shore.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

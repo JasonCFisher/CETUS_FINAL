@@ -1,0 +1,13 @@
+ID=altMain
+Name=Main Street
+longDesc=The downtown area of Schuylkill now looks dark and twisted.  The buildings themselves look wrong, and even their angles seem to conform to no sane geometry.
+shortDesc=You're standing in downtown Schuylkill.
+visited=0
+Item01=altBusinesses
+Item02=altCar
+adj0=altChurchyard
+adj1=NULL
+adj2=altBar
+adj3=altEntranceway
+adj4=NULL
+adj5=NULL

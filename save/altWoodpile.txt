@@ -1,0 +1,9 @@
+ID=altWoodpile
+Name=Woodpile
+roomDescription=A small woodpile sits on the other side of the path.
+Description=The fresh cut wood looks alien and unnatural.  The bark is the color of a desiccated corpse and the grain seems twisted into the shapes of screaming, grotesque faces.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

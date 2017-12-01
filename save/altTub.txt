@@ -1,0 +1,9 @@
+ID=altTub
+Name=Tub
+roomDescription=An old free standing tub sits at one wall.
+Description=The faucet is dripping into a small puddle in the tub.  That doesn't look like water...
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

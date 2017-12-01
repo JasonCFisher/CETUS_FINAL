@@ -1,0 +1,9 @@
+ID=altOcean
+Name=Ocean
+roomDescription=You can see the ocean past the drop off.
+Description=The moon here casts a ghastly reflection on the surface of the water.  Instead of waves crashing against the rocks, the ocean here seems to writhe like a mass of worms.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

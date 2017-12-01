@@ -1,0 +1,13 @@
+ID=normKitchen
+Name=Kitchen
+longDesc=The mansion kitchen.  A door on the west wall leads down a stairwell to the cellar.
+shortDesc=The mansion kitchen.
+visited=0
+Item01=normFridge
+Item02=normCounter
+adj0=NULL
+adj1=NULL
+adj2=normDiningRm
+adj3=NULL
+adj4=NULL
+adj5=normCellar

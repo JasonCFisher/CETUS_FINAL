@@ -1,0 +1,9 @@
+ID=altTables
+Name=Tables
+roomDescription=The tables here are still upright, and in exactly the same place they should be in your world.
+Description=As you look closer, it doesn't seem like the tables are actually made out of wood.  At least, not any wood that you've ever seen.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

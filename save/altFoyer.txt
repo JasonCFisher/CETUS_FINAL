@@ -1,0 +1,13 @@
+ID=altFoyer
+Name=Foyer
+longDesc=The entry foyer to the mansion.  There are doors on each wall and a set of stairs goes up to the second floor.
+shortDesc=The entry foyer to the mansion.
+visited=0
+Item01=altPainting1
+Item02=altPainting2
+adj0=altDiningRm
+adj1=altMansion
+adj2=altLivingRm
+adj3=altLibrary
+adj4=altStairs
+adj5=NULL

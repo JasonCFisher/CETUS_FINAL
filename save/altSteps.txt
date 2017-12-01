@@ -1,0 +1,9 @@
+ID=altSteps
+Name=Steps
+roomDescription=The stair steps are narrow and steep.
+Description=The steps creak and groan as you put your weight on them.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

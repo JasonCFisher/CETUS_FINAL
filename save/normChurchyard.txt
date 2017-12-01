@@ -1,0 +1,13 @@
+ID=normChurchyard
+Name=Churchyard
+longDesc=You come to a small churchyard on the outskirts of town.
+shortDesc=You enter the small churchyard.
+visited=0
+Item01=normChurchSign
+Item02=normChurchGate
+adj0=normCem1
+adj1=normMain
+adj2=NULL
+adj3=normChurch
+adj4=NULL
+adj5=NULL

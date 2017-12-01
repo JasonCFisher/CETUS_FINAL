@@ -1,0 +1,13 @@
+ID=altLivingRm
+Name=Living Room
+longDesc=The mansion living room.
+shortDesc=The mansion living room.
+visited=0
+Item01=altTV
+Item02=altFireplace
+adj0=altServant
+adj1=NULL
+adj2=NULL
+adj3=altFoyer
+adj4=NULL
+adj5=NULL

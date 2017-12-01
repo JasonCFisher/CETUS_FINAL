@@ -1,0 +1,13 @@
+ID=normBed1
+Name=Bedroom1
+longDesc=The master bedroom of the mansion.
+shortDesc=The master bedroom.
+visited=0
+Item01=normMirror
+Item02=normDoll
+adj0=normBath
+adj1=NULL
+adj2=normStairs
+adj3=NULL
+adj4=NULL
+adj5=NULL

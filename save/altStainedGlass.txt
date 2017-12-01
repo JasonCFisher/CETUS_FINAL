@@ -1,0 +1,9 @@
+ID=altStainedGlass
+Name=Windows
+roomDescription=Four remarkably well crafted stained glass windows sit high above the altar, almost looking down upon it.
+Description=The left window depicts smaller, nondescript men - backs turned - paying homage to an image of Poseidon with a gold trident.  The next shows a picture of the seas in red, Poseidon in the background, and a monster emerging from the water - spears and swords breaking around its hideous form.  The third shows a fireball falling from the heavens, about to strike the creature.  The last image shows the monster inverted on the ground, a trident plunged into its corpse.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

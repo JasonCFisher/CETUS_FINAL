@@ -1,0 +1,13 @@
+ID=altHidBeds
+Name=Sleeping Area
+longDesc=A sleeping area just off the entry room to the hidden area under the mansion.
+shortDesc=A small sleeping area.
+visited=0
+Item01=altCultBeds
+Item02=altCultChests
+adj0=altHidEntry
+adj1=NULL
+adj2=NULL
+adj3=NULL
+adj4=NULL
+adj5=NULL

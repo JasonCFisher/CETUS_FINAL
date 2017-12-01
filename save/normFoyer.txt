@@ -1,0 +1,13 @@
+ID=normFoyer
+Name=Foyer
+longDesc=The entry foyer to the mansion.  There are doors on each wall and a set of stairs goes up to the second floor.
+shortDesc=The entry foyer to the mansion.
+visited=0
+Item01=normPainting1
+Item02=normPainting2
+adj0=normDiningRm
+adj1=normMansion
+adj2=normLivingRm
+adj3=normLibrary
+adj4=normStairs
+adj5=NULL

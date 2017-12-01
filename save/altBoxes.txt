@@ -1,0 +1,9 @@
+ID=altBoxes
+Name=Boxes
+roomDescription=A few boxes are sitting against one wall.
+Description=The boxes look wet on the bottom, and flies are buzzing around them.  You can guess from the stench that you don't want to know what's in them.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

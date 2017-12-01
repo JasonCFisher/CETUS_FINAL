@@ -1,0 +1,9 @@
+ID=altTools
+Name=Tools
+roomDescription=You see a peg board on the far wall with what looks like small tools hanging on it.
+Description=You look to see if there's anything useful on the peg board, and wish you hadn't.  It's covered with small, nasty looking blades, spikes, and pliers.  Nothing big enough to be much use as a weapon, but they're all stained with old blood.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

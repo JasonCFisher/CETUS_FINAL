@@ -1,0 +1,9 @@
+ID=altFridge
+Name=Refridgerator
+roomDescription=A refridgerator sits against one of the walls.
+Description=The fridge is empty, and the interior seems to go back forever.  From somewhere in the depths you hear a voice cry "Zuul!"
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

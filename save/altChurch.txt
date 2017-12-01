@@ -1,0 +1,14 @@
+ID=altChurch
+Name=Church
+longDesc=An old church, filled with disturbing cyclopean imagery.  It seems to be dedicated to an ancient god never worshipped by anything human.
+shortDesc=An old church to a disturbing ancient god.
+visited=0
+Item01=altPews
+Item02=altStainedGlass
+Item03=Trident
+adj0=NULL
+adj1=NULL
+adj2=altChurchyard
+adj3=NULL
+adj4=NULL
+adj5=NULL
