@@ -49,7 +49,7 @@ World* loadhelper(World* current){
     while(1){
         cout << "\nPlease pick a number:\n1. Load from Save.\n2. Load New Game.\nAny other number to cancel load.\nEnter your choice: ";
         cin >> choice;
-
+        cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
         switch(choice){
             case 1:
                 return loadWorld("save");
@@ -660,6 +660,7 @@ int parser(World* world){
                 world = loadhelper(world);
                 if(world!=NULL){
                     player = world->getPlayer();
+                    displayRoom(world, 0);
                 } else {
                     cout << "Error loading game!\n";
                 }
