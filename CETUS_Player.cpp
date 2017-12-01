@@ -13,14 +13,14 @@
 #define WEST 3
 #define UP 4
 #define DOWN 5
-#define LINESIZE 80
+#define LINESIZE 101
 
-const std::string red("\033[0;31m");
+/*const std::string red("\033[0;31m");
 const std::string green("\033[1;32m");
 const std::string yellow("\033[1;33m");
 const std::string cyan("\033[0;36m");
 const std::string magenta("\033[0;35m");
-const std::string reset("\033[0m");
+const std::string reset("\033[0m");*/
 
 
 using std::endl;

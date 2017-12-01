@@ -104,6 +104,14 @@ void Item::setName(string current){
 	return;
 	
 }
+
+void Item::setID(string current){
+	
+	this->ID = current;
+	return;
+	
+}
+
 void Item::setDescription(string current){
 	
 	this->Description = current;

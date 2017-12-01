@@ -30,7 +30,14 @@ using std::endl;
 using std::string;
 using std::vector;
 using std::map;
-
+/*
+const std::string red("\033[0;31m");
+const std::string green("\033[1;32m");
+const std::string yellow("\033[1;33m");
+const std::string cyan("\033[0;36m");
+const std::string magenta("\033[0;35m");
+const std::string reset("\033[0m");
+*/
 /*
  Required verbs:
  look - repeats the long form explanation of the room
@@ -46,6 +53,7 @@ using std::map;
 //functions to create verb and noun lists for searching
 World* loadhelper(World* current){
     int choice;
+	cout << yellow;
     while(1){
         cout << "\nPlease pick a number:\n1. Load from Save.\n2. Load New Game.\nAny other number to cancel load.\nEnter your choice: ";
         cin >> choice;
@@ -64,10 +72,11 @@ World* loadhelper(World* current){
         std::cin.seekg(0,std::ios::end);
         std::cin.clear();
     }
+	cout << reset;
 }
 void helper(){
 
-    //cout << yellow;
+    cout << yellow;
     string spacer = "\t\t\t\t\t\t\t[";
     cout << "\nCommand Help List\n----------------------------------------------------------------------------------\n";
     cout << "Quit" << spacer << "Exits the game.]\n";
@@ -91,7 +100,7 @@ void helper(){
     cout << "Loadgame" << "\t\t\t\t\t\t[" << "Loads last saved state.]\n";
     cout << "Scan" << "\t\t\t\t\t\t[" << "Displays list of Item names in a room.]\n";
     cout << "----------------------------------------------------------------------------------\n";
-    //cout << reset;
+    cout << reset;
 
 }
 
@@ -157,13 +166,13 @@ void displayRoom(World* world, int look){
 
 
     if(player->getCurrentRoom()->hasEnemy()){
-        std::cout <<"\n\n";
+        std::cout << red <<"\n\n";
         player->getCurrentRoom()->getEnemy()->getRoomDesc();
     } else {
-        cout << "\n";
+        cout << reset << "\n";
     }
 
-    std::cout << "\nExits:\n";
+    std::cout << yellow << "\nExits:\n";
     world->printAllAdjacent();
 
 
@@ -308,7 +317,7 @@ int parser(World* world){
 
 
     //create variables to simulate a room, actions, items, etc
-    std::string input, first, verb, prev, combo;
+    std::string input, first, verb, prev, combo, temp;
     Item* noun1 = new Item;
     Item* noun2 = new Item;
     Creature* baddie = NULL;
@@ -339,7 +348,8 @@ int parser(World* world){
         bool found=false;
         bool selfFlag = false;
 
-        printf("\nWhat are you going to do?\n");
+        temp = "\nWhat are you going to do?\n";
+		cetusPrint(&temp, 1);
 
         //Parse the input
 
@@ -478,6 +488,7 @@ int parser(World* world){
         }
 
         switch(choice){
+			cout << yellow;
             case 0:  //Quit game
 				cout << yellow;
                 std::cout << "So sad to see you leave...\n";
@@ -608,7 +619,7 @@ int parser(World* world){
                         if(world!=NULL){
                             player = world->getPlayer();
                         } else {
-                            cout << "Error loading game!\n";
+                            cout << red << "Error loading game!\n";
                         }
                         break;
                     }
@@ -625,7 +636,7 @@ int parser(World* world){
                         if(world!=NULL){
                             player = world->getPlayer();
                         } else {
-                            cout << "Error loading game!\n";
+                            cout << red << "Error loading game!\n";
                         }
                         break;
                     }
@@ -636,14 +647,14 @@ int parser(World* world){
                 }
                 break;
             case 8:  //Grab, Take, Pick up
-		cout << magenta;
+				cout << yellow;
                 if(foundRoom && foundNoun1 && noun1->getCollectible()){
                     player->addItem(player->getCurrentRoom()->removeItem(noun1));
                     cout << "\nYou pick up a " << noun1->getName() << "\n";
                 }else if(foundRoom && foundNoun1 && !noun1->getCollectible()){
-                    cout << "You cannot take that.\n";
+                    cout << yellow << "You cannot take that.\n";
                 }else {
-                    cout << "I don't see that in the room.\n";
+                    cout << yellow << "I don't see that in the room.\n";
                 }
 				cout << reset;
                 break;
@@ -671,18 +682,22 @@ int parser(World* world){
 
                 break;
             case 14:  //Look At
-                cout << yellow;
+                cout << cyan;
                 if(foundNoun1 && world->getCurrentRoom()->getID() == "normCellar" && noun1->getID() == "normDistDust" && !world->checkDir(3)){
-                    cout << noun1->getDescription() << "\n";
+                    temp = noun1->getDescription();
+					cetusPrint(&temp, 3);
+					//cout << noun1->getDescription() << "\n";
                     world->openPassage(1);
                 }else if(foundNoun1){
                     if(!(world->actController(noun1->getName(), "Look"))){
-                        cout << noun1->getDescription() << "\n";
+						temp = noun1->getDescription();
+						cetusPrint(&temp, 3);
+                        //cout << cyan << noun1->getDescription() << "\n";
                     }
                 }else if(foundEnemy){
                     baddie->getDesc();
                 } else {
-                    cout << "I don't know what you want to look at.\n";
+                    cout << yellow << "I don't know what you want to look at.\n";
                 }
 
 
@@ -818,8 +833,10 @@ int parser(World* world){
                     }
                 } break;
             default:
+				cout << yellow;
                 std::cout << "I don't know what you are asking for.\n";
         }
+		cout << reset;
     }
 
     return 0;

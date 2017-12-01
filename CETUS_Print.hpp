@@ -14,7 +14,7 @@ using std::ifstream;
 #ifndef CETUS_PRINT_HPP
 #define CETUS_PRINT_HPP
 
-#define LINESIZE 80
+#define LINESIZE 109
 
 const std::string red("\033[0;31m");
 const std::string green("\033[1;32m");
@@ -94,7 +94,7 @@ void cetusPrint(string* inText, int color){
 
 	for (size_t i = 0; i < inText->length(); i++){
 
-		if(count <= LINESIZE){
+		if(count < LINESIZE){
 
 
 			cout << inText->at(i);
@@ -109,23 +109,21 @@ void cetusPrint(string* inText, int color){
 
 		else{
 
-                	if(inText->at(i) != ' ' && inText->at(i) != '\n'){
+            if(inText->at(i) != ' ' && inText->at(i) != '\n'){
 				
 				cout << inText->at(i);
-                        	count++;
+               	count++;
 				
-                        }
+            }
 			else{
-
-                                cout << endl;
-                                count = 0;
-
-                        }
-                        
+				cout << inText->at(i);
+				cout << endl;
+				count = 0;
+            }           
 		}
 	
 	}
-	cout << reset;
+	cout << endl << reset;
 	
 	return;
 
