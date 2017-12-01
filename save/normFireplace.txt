@@ -1,0 +1,9 @@
+ID=normFireplace
+Name=Fireplace
+roomDescription=A fireplace is set into the east wall.
+Description=The fireplace is cold and empty.  It doesn't look like it's been used in years.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

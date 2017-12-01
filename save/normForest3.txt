@@ -1,0 +1,13 @@
+ID=normForest3
+Name=Forest3
+longDesc=The forest terminates on its northern edge at a high cliff overlooking the sea.
+shortDesc=Just more forest.
+visited=0
+Item01=normCliff
+Item02=normOcean
+adj0=NULL
+adj1=normForest2
+adj2=NULL
+adj3=NULL
+adj4=NULL
+adj5=NULL

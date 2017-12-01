@@ -1,0 +1,15 @@
+ID=normLair
+Name=Lair
+longDesc=You've reached the epicenter of the wrongness in this place.  The air here swims in front of your face and the shadows seem to move and writhe.  You keeep seeing things just out of the corner of your eye.
+shortDesc=A ritual room underneath the mansion.
+visited=0
+Item01=Ritual
+Item02=normAltar
+Item03=normIdol
+Item04=Tome
+adj0=normHidOrnateHall
+adj1=NULL
+adj2=NULL
+adj3=NULL
+adj4=NULL
+adj5=NULL
