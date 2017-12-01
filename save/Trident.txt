@@ -1,0 +1,9 @@
+ID=Trident
+Name=Trident
+roomDescription= A golden trident hovers above the floor, fork towards the heavens, slowly rotating in place.
+Description= A spear-like weapon with three tines at the end, made of pure gold.  You can almost hear ocean waves when you get close.
+Power=12
+Healing=0
+weapon=1
+roomFeature=0
+collectible=1

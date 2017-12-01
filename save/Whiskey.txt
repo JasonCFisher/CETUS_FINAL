@@ -1,0 +1,9 @@
+ID=Whiskey
+Name=Whiskey
+roomDescription=A partially consumed bottle of whiskey sits nearby.
+Description=A bottle of whiskey, unknown brand.  Really not worth drinking.  Must have another use.
+Power=0
+Healing=0
+weapon=0
+roomFeature=0
+collectible=1

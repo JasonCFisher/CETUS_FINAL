@@ -1,0 +1,9 @@
+ID=Phone
+Name=Phone
+roomDescription=A black phone lies in the dirt next to you.
+Description=A black, off brand flip phone.  Makes calls, gets voicemails.
+Power=0
+Healing=0
+weapon=0
+roomFeature=0
+collectible=1
