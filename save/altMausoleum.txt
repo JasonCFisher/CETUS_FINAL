@@ -1,0 +1,9 @@
+ID=altMausoleum
+Name=Mausoleum
+roomDescription=A small mausoleum sits near the end of the cemetery.
+Description=The mausoleum is dark, malevolent, and silent. 
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

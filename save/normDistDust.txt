@@ -1,0 +1,9 @@
+ID=normDistDust
+Name=Disturbed Dust
+roomDescription=It looks like there some disturbed dust on the floor by the east wall.
+Description=The dust is swept out from the wall in an arc, as if someone had opened a section of the wall.  Just above, on the wall is an odd wall block.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

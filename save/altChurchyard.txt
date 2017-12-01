@@ -1,0 +1,13 @@
+ID=altChurchyard
+Name=Churchyard
+longDesc=You come to a small churchyard on the outskirts of town.
+shortDesc=You enter the small churchyard.
+visited=0
+Item01=altChurchSign
+Item02=altChurchGate
+adj0=altCem1
+adj1=altMain
+adj2=NULL
+adj3=altChurch
+adj4=NULL
+adj5=NULL

@@ -1,0 +1,13 @@
+ID=altHidHall
+Name=Hallway
+longDesc=A hallway that extends farther into the secret area underneath the mansion.
+shortDesc=A hallway in the hidden area under the mansion.
+visited=0
+Item01=altMarkings2
+Item02=altTapestry2
+adj0=NULL
+adj1=altHidStorage
+adj2=altHidOrnateHall
+adj3=altHidEntry
+adj4=NULL
+adj5=NULL

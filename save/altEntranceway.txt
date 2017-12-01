@@ -1,0 +1,13 @@
+ID=altEntranceway
+Name=Entranceway
+longDesc=The driveway no longer seems pleasant, twisting and turning in ways that hurt your eyes as it curves up to the mansion in the north.
+shortDesc=The courtyard of an old mansion.
+visited=0
+Item01=altMansGate
+Item02=altBarnFeat
+adj0=altMansion
+adj1=NULL
+adj2=altMain
+adj3=altBarn
+adj4=NULL
+adj5=NULL

@@ -1,0 +1,13 @@
+ID=normStairs
+Name=Stairs
+longDesc=Stairs lead up to the second floor.  The top of the stairs opens to doors on the east and west.  A hallway extends through the second floor to the north.
+shortDesc=The top of the mansion stairs
+visited=0
+Item01=normBannister
+Item02=normSteps
+adj0=normHall
+adj1=NULL
+adj2=normBed2
+adj3=normBed1
+adj4=NULL
+adj5=normFoyer

@@ -1,0 +1,9 @@
+ID=normTub
+Name=Tub
+roomDescription=An old free standing tub sits at one wall.
+Description=There is some rust staining near the faucet.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

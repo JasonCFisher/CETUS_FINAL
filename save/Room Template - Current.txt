@@ -1,0 +1,13 @@
+ID=
+Name=
+longDesc=
+shortDesc=
+visited=0
+Item01=
+Item02=
+adj0=NULL
+adj1=NULL
+adj2=NULL
+adj3=NULL
+adj4=NULL
+adj5=NULL

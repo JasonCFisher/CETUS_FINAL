@@ -1,8 +1,0 @@
-Description=The church looks old, as if it has stood since colonial times.  Like the rest of the town, it shows signs of wear and disrepair.
-Healing=0
-Name=Old Church
-Power=0
-collectible=0
-roomDescription=An old church stands off to your right.
-roomFeature=1
-weapon=0

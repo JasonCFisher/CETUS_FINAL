@@ -1,8 +1,0 @@
-Description=The gate shows signs of rust and disrepair.
-Healing=0
-Name=Church Gate
-Power=0
-collectible=0
-roomDescription=A small, wrought-iron gate allows entrance to the cemetery.
-roomFeature=1
-weapon=0

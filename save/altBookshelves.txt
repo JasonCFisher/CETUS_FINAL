@@ -1,0 +1,9 @@
+ID=altBookshelves
+Name=Bookshelves
+roomDescription=Bookshelves line two walls of the library.
+Description=The writing on the book covers writhes in your mind as you try to read it.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

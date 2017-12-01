@@ -1,0 +1,13 @@
+ID=normHidStorage
+Name=Storage
+longDesc=A small storage room just off the hallway.  
+shortDesc=A small storage room.
+visited=0
+Item01=normCobwebs
+Item02=normHidStorShelves
+adj0=normHidHall
+adj1=NULL
+adj2=NULL
+adj3=NULL
+adj4=NULL
+adj5=NULL

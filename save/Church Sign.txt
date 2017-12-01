@@ -1,8 +1,0 @@
-Description=The sign says "1st Congretionalist Meeting House of Schuylkill.  Est. 1716"
-Healing=0
-Name=Church Sign
-Power=0
-collectible=0
-roomDescription=A small sign sits at the front of the church yard next to the gate.
-roomFeature=1
-weapon=0

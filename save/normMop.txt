@@ -1,0 +1,9 @@
+ID=normMop
+Name=Mop
+roomDescription=You see a mop standing in the corner
+Description=The mop is sitting in a dry bucket.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

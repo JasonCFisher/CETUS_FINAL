@@ -1,0 +1,9 @@
+ID=altTable
+Name=Table
+roomDescription=A long table runs down the center of the room.
+Description=The table is laden with bloody slabs of meat and some sort of disgusting overripe fruit.  The smell is horrible, and you don't want to speculate on the meat.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

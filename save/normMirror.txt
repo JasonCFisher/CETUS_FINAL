@@ -1,0 +1,9 @@
+ID=normMirror
+Name=Mirror
+roomDescription=An old, full length mirror is set against one wall.
+Description=The mirror is large, heavy, and ornate.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

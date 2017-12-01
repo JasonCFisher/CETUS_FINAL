@@ -1,0 +1,9 @@
+ID=normStatues
+Name=Statues
+roomDescription=Small stone statues sit on either side of the porch steps.
+Description=The weathered statues of mermaids look like they've been sitting here for a hundred years.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

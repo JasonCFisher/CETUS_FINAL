@@ -1,0 +1,13 @@
+ID=normHidHall
+Name=Hallway
+longDesc=A hallway that extends farther into the secret area underneath the mansion.  The more you penetrate deeper into this area under the mansion, the more things seem off and wrong.
+shortDesc=A hallway in the hidden area under the mansion.
+visited=0
+Item01=normMarkings2
+Item02=normScorchMarks2
+adj0=NULL
+adj1=normHidStorage
+adj2=normHidOrnateHall
+adj3=normHidEntry
+adj4=NULL
+adj5=NULL

@@ -1,0 +1,13 @@
+ID=normServant
+Name=Servant Quarters
+longDesc=A small room off the dining room where the servants slept.
+shortDesc=The mansion servant quarters.
+visited=0
+Item01=normServBeds
+Item02=normBoxes
+adj0=NULL
+adj1=normLivingRm
+adj2=NULL
+adj3=normDiningRm
+adj4=NULL
+adj5=NULL

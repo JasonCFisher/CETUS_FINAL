@@ -1,0 +1,9 @@
+ID=normCultBeds
+Name=Beds
+roomDescription=There are a couple beds in the room.
+Description=The beds are old, small, and narrow.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0

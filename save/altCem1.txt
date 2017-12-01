@@ -1,0 +1,13 @@
+ID=altCem1
+Name=Cemetery South
+longDesc=A large field of gravestones lays around.  The writing carved onto the gravestones is like nothing you have ever seen before.  The text seems to writhe as you try to read it, shifting and changing before your eyes.  More graves lie to the north, the churchyard to the south.
+shortDesc=A graveyard.
+visited=0
+Item01=altGravestone
+Item02=altGrave
+adj0=altCem2
+adj1=altChurchyard
+adj2=NULL
+adj3=NULL
+adj4=NULL
+adj5=NULL

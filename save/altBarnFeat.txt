@@ -1,0 +1,9 @@
+ID=altBarnFeat
+Name=Barn
+roomDescription=The barn still stands on the west side of the driveway here.
+Description=The barn which stood solidly in your world crouches here like a beaten cur, vicious and snarling.
+Power=0
+Healing=0
+weapon=0
+roomFeature=1
+collectible=0
