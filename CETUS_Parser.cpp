@@ -21,9 +21,6 @@
 #include "CETUS_Player.hpp"
 #include "CETUS_Room.hpp"
 #include "CETUS_data.hpp"
-//#include "CETUS_World.hpp"
-//#include "creature.hpp"
-//#include "ghost.hpp"
 #include "battle.hpp"
 #include "CETUS_Print.hpp"
 
@@ -402,7 +399,7 @@ int parser(World* world){
        		}
 
             //search for enemy
-            if(!found && (choice == 1 || choice == 14 || choice == 18) && !foundEnemy && player->getCurrentRoom()->hasEnemy()){
+            if(!found && (choice == 1 || choice == 14 || choice == 18 || choice == 24) && !foundEnemy && player->getCurrentRoom()->hasEnemy()){
                 baddie = enemySearch(player, &found, &foundEnemy, first);
 
             }
@@ -435,7 +432,7 @@ int parser(World* world){
                     choice = mymap.find(verb)->second;
                 }
                 //search for enemy
-                if(!found && (choice == 1 || choice == 14 || choice ==18) && !foundEnemy && player->getCurrentRoom()->hasEnemy()){
+                if(!found && (choice == 1 || choice == 14 || choice ==18 || choice == 24) && !foundEnemy && player->getCurrentRoom()->hasEnemy()){
                     baddie = enemySearch(player, &found, &foundEnemy, combo);
 
                 }
@@ -791,6 +788,7 @@ int parser(World* world){
                     world->openPassage(2);
                 } else if(foundEnemy){
                     if(world->getCurrentRoom()->hasEnemy() && !world->getCurrentRoom()->getEnemy()->isDead(0)){
+                        cout << "\nYou pushed the " << baddie->getName() << ".\n";
                         if(battle(player, world->getCurrentRoom()->getEnemy(), 0, 1)==0){
                             world = loadhelper(world);
                             if(world!=NULL){
@@ -800,7 +798,7 @@ int parser(World* world){
                             }
                             break;
                         }
-                    } else { cout << "Pushing a corpse?  Tough guy...\n";}
+                    } else { cout << "\nPushing a corpse?  Tough guy...\n";}
                     
                 } else if(foundNoun1) { cout << "Nothing happens.\n";
                 } else { cout << "I don't know what you are wanting to push.\n";
