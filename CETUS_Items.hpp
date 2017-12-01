@@ -36,6 +36,7 @@ class Item {
 		bool getRoomFeature();
 		bool getCollectible();
 		void setName(string current);
+		void setID(string current);
 		void setDescription(string current);
 		void setRoomDescription(string current);
 		void setPower(int current);

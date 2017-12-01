@@ -97,5 +97,29 @@ BOOST_AUTO_TEST_CASE(Item_Test){
 	BOOST_CHECK_EQUAL(currentItem->getCollectible(), true);
 	BOOST_CHECK_EQUAL(currentItem->getRoomFeature(), true);
 	
+	currentItem->setName("items");
+	currentItem->setID("2");
+	currentItem->setDescription("test");
+	currentItem->setRoomDescription("room");
+	currentItem->setPower(10);
+	currentItem->setHealing(10);
+	currentItem->setWeapon(true);
+	currentItem->setCollectible(true); 
+	currentItem->setRoomFeature(true);
+	
+	
+	BOOST_CHECK_EQUAL(currentItem->getID(), "2");
+	BOOST_CHECK_EQUAL(currentItem->getName(), "items");
+	BOOST_CHECK_EQUAL(currentItem->getDescription(), "test");
+	BOOST_CHECK_EQUAL(currentItem->getRoomDescription(), "room");
+	BOOST_CHECK_EQUAL(currentItem->getPower(), 10);
+	BOOST_CHECK_EQUAL(currentItem->getHealing(), 10);
+	BOOST_CHECK_EQUAL(currentItem->getWeapon(), true);
+	BOOST_CHECK_EQUAL(currentItem->getCollectible(), true);
+	BOOST_CHECK_EQUAL(currentItem->getRoomFeature(), true);
+	
+	currentItem->damageItem(10);
+	BOOST_CHECK_EQUAL(currentItem->getPower(), 0);
+	
 	std::cout << "\n\n";
 }

@@ -4,6 +4,7 @@
 #include "CETUS_Items.hpp"
 #include "creature.hpp"
 #include "CETUS_List.hpp"
+//#include "CETUS_Print.hpp"
 #ifndef CETUS_ROOM_HPP
 #define CETUS_ROOM_HPP
 
@@ -11,7 +12,9 @@ using std::string;
 
 
 class List;
-
+void printLogo();
+void ClearScreen();
+void cetusPrint(string* temp, int color);
 
 class Room {
 	

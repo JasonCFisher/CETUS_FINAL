@@ -23,6 +23,9 @@ const std::string cyan("\033[0;36m");
 const std::string magenta("\033[0;35m");
 const std::string reset("\033[0m");
 
+void printLogo();
+void ClearScreen();
+void cetusPrint(string* temp, int color);
 
 using std::endl;
 using std::cout;
@@ -281,7 +284,10 @@ using std::string;
 		for (int i = 0; i < temp->currentRoom->roomItems.size(); i++){
 
 			if (temp->currentRoom->roomItems[i] != NULL){
-				cout << "  " << temp->currentRoom->roomItems[i]->getRoomDescription();
+				string tempString = temp->currentRoom->roomItems[i]->getRoomDescription();
+				cetusPrint(&tempString, 3);
+				cout << "  "; 
+				//<< temp->currentRoom->roomItems[i]->getRoomDescription();
 			}
 		}
 
@@ -338,6 +344,7 @@ using std::string;
                     moveFlag=1;
                     this->getPlayer()->incrementMoves();
                 } else {
+					cout << yellow;
                     printf("\nThere is no apparent exit in that direction.\n");
                 }
 				break;
@@ -349,6 +356,7 @@ using std::string;
                     moveFlag=1;
                     this->getPlayer()->incrementMoves();
                 } else {
+					cout << yellow;
                     printf("\nThere is no apparent exit in that direction.\n");
                 }
 				break;
@@ -360,6 +368,7 @@ using std::string;
                     moveFlag=1;
                     this->getPlayer()->incrementMoves();
                 } else {
+					cout << yellow;
                     printf("\nThere is no apparent exit in that direction.\n");
                 }
 				break;
@@ -371,6 +380,7 @@ using std::string;
                     moveFlag=1;
                     this->getPlayer()->incrementMoves();
                 } else {
+					cout << yellow;
                     printf("\nThere is no apparent exit in that direction.\n");
                 }
 				break;
@@ -382,6 +392,7 @@ using std::string;
                     moveFlag=1;
                     this->getPlayer()->incrementMoves();
                 } else {
+					cout << yellow;
                     printf("\nThere is no apparent exit in that direction.\n");
                 }
 				break;
@@ -393,11 +404,13 @@ using std::string;
                     moveFlag=1;
                     this->getPlayer()->incrementMoves();
                 } else {
+					cout << yellow;
                     printf("\nThere is no apparent exit in that direction.\n");
                 }
 				break;
 
 			default:
+				cout << yellow;
                 printf("\nThat is not a valid direction.\n");
 				break;
 
@@ -543,7 +556,8 @@ int World::actController(string item, string action){
     int moveAct=0;
     //end of first act
     if(this->getPlayer()->getCurrentRoom()->getID() == "normLair" && this->getAct() == 1 && item == "Ritual"){
-        cout << std::endl << ritualInterrupt << endl;
+        cetusPrint(&ritualInterrupt, 0);
+		//cout << red << std::endl << ritualInterrupt << endl;
         this->incrementAct();
         Item* temp = findRoomItem(item, true);
 		if (temp != NULL){
@@ -559,7 +573,8 @@ int World::actController(string item, string action){
     }
     //going back into bad dimension
     if(!moveAct && this->getPlayer()->getCurrentRoom()->getID() == "normLair" && this->getAct() >= 2 && item == "Altar" && action == "touch"){
-        cout << std::endl << touchAltar << endl;
+        cetusPrint(&touchAltar, 0);
+		//cout << red << std::endl << touchAltar << endl;
         for(int i=0; i< worldRooms.size(); i++){
             if(this->worldRooms[i]->getID() == "altLair"){
                 target = this->worldRooms[i];
@@ -572,7 +587,8 @@ int World::actController(string item, string action){
 
     //inspecting bear
     if(!moveAct && this->getPlayer()->getCurrentRoom()->getID() == "altBed1" && this->getAct() >= 2 && item == "Doll" && action == "touch"){
-        cout << std::endl << touchDoll << endl;
+        cetusPrint(&touchDoll, 0);
+		//cout << std::endl << touchDoll << endl;
         for(int i=0; i< worldRooms.size(); i++){
             if(this->worldRooms[i]->getID() == "normBed1"){
                 target = this->worldRooms[i];
@@ -660,13 +676,13 @@ void World::destroyRoomItem(string current){
     
 void World::getVoicemails(){
     if(this->act == 1){
-        cout << "...Dad, I got this great place, the old mansion west of town.  I'll be there when you get in.\n";
+        cout << yellow << "\n...Dad, I got this great place, the old mansion west of town.  I'll be there when you get in.\n";
     } else if(this->act == 2){
-        cout << "\nDad....<heavy breathing> Dad...I got away...hiding in my room....Help me please!\n";
+        cout << yellow << "\nDad....<heavy breathing> Dad...I got away...hiding in my room....Help me please!\n";
     } else if (this->act == 3){
-        cout << "\n...<static>  HELP! <shuffling> <muted talk> Why a church? <static>\n";
+        cout << yellow << "\n...<static>  HELP! <shuffling> <muted talk> Why a church? <static>\n";
     } else {
-        cout << "\nLET GO OF ME!  What do you want from ... <LOUD GROWL!> <SCREAM>\n";
+        cout << yellow << "\nLET GO OF ME!  What do you want from ... <LOUD GROWL!> <SCREAM>\n";
     }
     return;
 }

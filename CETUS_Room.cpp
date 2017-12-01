@@ -1,4 +1,5 @@
 #include "CETUS_Room.hpp"
+
 #include <iostream>
 
 using std::endl;
@@ -50,14 +51,18 @@ void Room::addNeighbor(int direction, Room* neighbor){
 
 void Room::getLong(){
 
-		cout << this->longDesc;
+		string temp = this->longDesc;
+		cetusPrint(&temp, 3);
+		//cout << this->longDesc;
 		return;
 	
 }
 
 void Room::getShort(){
 
-	cout << this->shortDesc;
+	string temp = this->shortDesc;
+	cetusPrint(&temp, 3);
+//	cout << this->shortDesc;
 	return;
 	
 }

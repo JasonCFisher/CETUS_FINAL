@@ -7,6 +7,15 @@
 ****************************************************************************/
 
 #include "CETUS_data.hpp"
+void printLogo();
+void ClearScreen();
+void cetusPrint(string* temp, int color);
+const std::string red("\033[0;31m");
+const std::string green("\033[1;32m");
+const std::string yellow("\033[1;33m");
+const std::string cyan("\033[0;36m");
+const std::string magenta("\033[0;35m");
+const std::string reset("\033[0m");
 
 
 /***************************************************************************
@@ -46,7 +55,9 @@ std::map<std::string, std::string> loadFile(std::string fileName) {
 		}
 	}
 	else {//file was not opened correctly
+		cout << red;
 		std::cout << fileName << " did not load correctly." << std::endl;
+		cout << reset;
 	}
 
 	//close file
@@ -82,7 +93,9 @@ void saveFile(std::string fileName, std::map<std::string, std::string> myMap) {
 		}
 	}
 	else {//if the file did not open
+		cout << red;
 		std::cout << fileName << " did not save correctly." << std::endl;
+		cout << reset;
 	}
 
 	//close file
@@ -335,11 +348,16 @@ World* loadWorld(std::string location) {
 	}
 	gameWorld->createItems(itemVect);
 
-	std::cout << "Game World loaded" << std::endl << std::endl;
-	std::cout << "After a solid day of driving, you're finally getting close to Schuylkill, Maine late into the night.  You smile to yourself remembering the last call you got from Amy - you've never heard your daughter so excited.  She's rented an old, historic house on the outskirts of town where she can stay while she's studying the rare red tide that suddenly hit the coast at the town.  You can't wait to finish the drive and see her.\n\nYou're driving down Main Street Schuylkill and getting close to the house Amy's rented when you start to realize that things don't quite look right.  It's too dark and quiet, even for this time of night.  Most of the lights are out, including the streetlights, but if you look closely you can just make out what looks like lumps on the sidewalks and up against the few cars parked on the street.  If it weren't so dark, you'd swear that most of the shops have had their windows broken.  You're looking so intently to pierce the gloom on the side of the road that you almost don't see something run out in front of your car.  You swerve wildly to miss it, lose control, and smash head first into a parked car.  The world goes black for a while...\n\nYou come to with the airbag in your face.  Your body feels like one huge bruise.  As you pull yourself out of the car, you realized in a detached way that your phone is buzzing with a new message." << std::endl << std::endl;
+	/*(std::cout << "Game World loaded" << std::endl << std::endl;
+	std::cout << "After a solid day of driving, you're finally getting close to Schuylkill, Maine late into the night.  You smile to yourself remembering the last call you got from Amy - you've never heard your daughter so excited.  She's rented an old, historic house on the outskirts of town where she can stay while she's studying the rare red tide that suddenly hit the coast at the town.  You can't wait to finish the drive and see her.\n\nYou're driving down Main Street Schuylkill and getting close to the house Amy's rented when you start to realize that things don't quite look right.  It's too dark and quiet, even for this time of night.  Most of the lights are out, including the streetlights, but if you look closely you can just make out what looks like lumps on the sidewalks and up against the few cars parked on the street.  If it weren't so dark, you'd swear that most of the shops have had their windows broken.  You're looking so intently to pierce the gloom on the side of the road that you almost don't see something run out in front of your car.  You swerve wildly to miss it, lose control, and smash head first into a parked car.  The world goes black for a while...\n\nYou come to with the airbag in your face.  Your body feels like one huge bruise.  As you pull yourself out of the car, you realized in a detached way that your phone is buzzing with a new message." << std::endl << std::endl;*/
+	
+	string temp = "Game World loaded\n\n";
+	cetusPrint(&temp, 2);
+	
+	temp = "After a solid day of driving, you're finally getting close to Schuylkill, Maine late into the night.  You smile to yourself remembering the last call you got from Amy - you've never heard your daughter so excited.  She's rented an old, historic house on the outskirts of town where she can stay while she's studying the rare red tide that suddenly hit the coast at the town.  You can't wait to finish the drive and see her.\n\nYou're driving down Main Street Schuylkill and getting close to the house Amy's rented when you start to realize that things don't quite look right.  It's too dark and quiet, even for this time of night.  Most of the lights are out, including the streetlights, but if you look closely you can just make out what looks like lumps on the sidewalks and up against the few cars parked on the street.  If it weren't so dark, you'd swear that most of the shops have had their windows broken.  You're looking so intently to pierce the gloom on the side of the road that you almost don't see something run out in front of your car.  You swerve wildly to miss it, lose control, and smash head first into a parked car.  The world goes black for a while...\n\nYou come to with the airbag in your face.  Your body feels like one huge bruise.  As you pull yourself out of the car, you realized in a detached way that your phone is buzzing with a new message.\n\n"; 
 
-
-
+	cetusPrint(&temp, 3);
+	
 	return gameWorld;
 }
 
@@ -494,7 +512,7 @@ void saveWorld(World *gameState) {
 
 	//Save player data
 	savePlayer(gameState->getPlayer());
-
+	cout << yellow;
 	std::cout << "Game Saved" << std::endl << std::endl;
-
+	cout << reset;
 }

@@ -20,6 +20,9 @@ using std::ifstream;
 class Item;
 class Room;
 class List;
+void printLogo();
+void ClearScreen();
+void cetusPrint(string* temp, int color);
 
 class Player{
 
