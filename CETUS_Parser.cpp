@@ -78,7 +78,7 @@ void helper(){
 
     cout << yellow;
     string spacer = "\t\t\t\t\t\t\t[";
-    cout << "\nCommand Help List\n----------------------------------------------------------------------------------\n";
+    cout << "\nCommand Help List\n---------------------------------------------------------------------------------------------------------\n";
     cout << "Quit" << spacer << "Exits the game.]\n";
     cout << "Status" << spacer << "Shows player stats.]\n";
     cout << "Look" << spacer << "View the room and objects in the current area.]\n";
@@ -98,8 +98,8 @@ void helper(){
     cout << "Inventory" << "\t\t\t\t\t\t[" << "Browse contents of inventory.]\n";
     cout << "Savegame" << "\t\t\t\t\t\t[" << "Saves current game progress.]\n";
     cout << "Loadgame" << "\t\t\t\t\t\t[" << "Loads last saved state.]\n";
-    cout << "Scan" << "\t\t\t\t\t\t[" << "Displays list of Item names in a room.]\n";
-    cout << "----------------------------------------------------------------------------------\n";
+    cout << "Scan" << "\t\t\t\t\t\t\t[" << "Displays list of Item names in a room.]\n";
+    cout << "---------------------------------------------------------------------------------------------------------\n";
     cout << reset;
 
 }
@@ -299,7 +299,7 @@ string useSpecifier(bool *foundNoun1, bool *foundNoun2, bool *found, bool *found
         verb = "attack";
     } else if(noun1->getName() == "Chips" || noun1->getName()== "Candy Bar"){
         verb = "eat";
-    } else if(noun1->getName() == "Bandaid" || noun1->getName()== "Salve"){
+    } else if(noun1->getName() == "Bandaid" || noun1->getName()== "Strange Salve"){
         verb = "apply";
     } else if(noun1->getName() == "Molotov Cocktail"){
         verb = "throw";

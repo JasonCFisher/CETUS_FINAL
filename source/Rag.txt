@@ -1,7 +1,7 @@
 ID=Rag
 Name=Rag
-roomDescription= A dirty bar rag sits crumpled on the floor.
-Description= An old worn bar rag, stained with things one could only guess at.  Must have some use though, right?
+roomDescription=A dirty bar rag sits crumpled on the floor.
+Description=An old worn bar rag, stained with things one could only guess at.  Must have some use though, right?
 Power=0
 Healing=0
 weapon=0

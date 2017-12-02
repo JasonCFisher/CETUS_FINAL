@@ -258,15 +258,15 @@ using std::string;
         Player* temp = this->currentPlayer;
         if (temp->inventory.size() == 0) {
 
-            cout << "Player has no items in inventory." << endl;
+            cout << yellow << "Player has no items in inventory." << endl;
             return;
         }
 
-        cout << "\nInventory\n" << "---------\n";
+        cout << yellow << "\nInventory\n" << "---------\n";
         for (int i = 0; i < temp->inventory.size(); i++){
 
             if (temp->inventory[i] != NULL){
-                cout << temp->inventory[i]->getName() << "\n";
+                cout << yellow << temp->inventory[i]->getName() << "\n";
             }
         }
 
@@ -285,8 +285,9 @@ using std::string;
 
 			if (temp->currentRoom->roomItems[i] != NULL){
 				string tempString = temp->currentRoom->roomItems[i]->getRoomDescription();
+				cout << cyan << "-";
 				cetusPrint(&tempString, 3);
-				cout << "  "; 
+				cout << "\n"; 
 				//<< temp->currentRoom->roomItems[i]->getRoomDescription();
 			}
 		}

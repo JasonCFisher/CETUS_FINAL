@@ -1,7 +1,7 @@
 ID=Lighter
 Name=Lighter
-roomDescription= A disposable lighter can be seen.
-Description= A corner store, 50 cent special.  Still has a little fluid in it.
+roomDescription=A disposable lighter can be seen.
+Description=A corner store, 50 cent special. Still has a little fluid in it.
 Power=0
 Healing=0
 weapon=0

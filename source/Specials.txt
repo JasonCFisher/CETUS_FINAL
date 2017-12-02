@@ -1,7 +1,7 @@
 ID=Specials
 Name=Specials
-roomDescription= The specials are written wall-mounted sign.
-Description= Today’s Special: The Molotov.  Let us make one today!
+roomDescription=The specials are written on a wall-mounted sign.
+Description=Today’s Special: The Molotov.  Let us make one today!
 Power=0
 Healing=0
 weapon=0

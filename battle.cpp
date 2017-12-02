@@ -24,7 +24,7 @@ int battle(Player *p1, Creature* c2, int modifier, int escaping){
         c2->defense(atkValue);
         
         if(c2->isDead(0)){
-            cout << endl << "The " << c2->getName() << " was defeated!" << endl;
+            cout << cyan << endl << "The " << c2->getName() << " was defeated!" << endl;
             if(c2->getName() == "Cetus"){
                 gameEnd();
             }
