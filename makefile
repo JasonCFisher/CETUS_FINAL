@@ -1,6 +1,6 @@
 all: main.cpp Data.o List.o Items.o Player.o Room.o World.o Parser.o Print.o battle.o creature.o cetus.o ghost.o cultist.o  merman.o 
 	
-	g++ -std=c++11 -o cetus main.cpp CETUS_World.o CETUS_data.o CETUS_List.o CETUS_Items.o CETUS_Player.o CETUS_Room.o CETUS_Parser.o CETUS_Print.hpp battle.o creature.o cetus.o ghost.o cultist.o  merman.o 
+	g++ -std=c++11 -o cetus main.cpp CETUS_World.o CETUS_data.o CETUS_List.o CETUS_Items.o CETUS_Player.o CETUS_Room.o CETUS_Parser.o battle.o creature.o cetus.o ghost.o cultist.o  merman.o 
 
 creature.o: creature.cpp
 	g++ -c creature.cpp -std=c++11
@@ -44,8 +44,5 @@ Print.o: CETUS_Print.hpp
 Parser.o: CETUS_Parser.cpp
 	g++ -c CETUS_Parser.cpp -std=c++11
 	
-test: CETUS_TEST.cpp World.o Room.o Player.o Items.o List.o
-	g++ -o test CETUS_TEST.cpp CETUS_World.o CETUS_List.o CETUS_Items.o CETUS_Player.o CETUS_Room.o  -std=c++11
-
 clean:
-	$(RM) *.o
+	$(RM) *.o ./cetus *.gch

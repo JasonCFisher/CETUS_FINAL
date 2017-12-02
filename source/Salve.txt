@@ -1,7 +1,7 @@
 ID=Salve
 Name=Strange Salve
-roomDescription= An odd liquid in a sealed vial sits by itself.
-Description= A sickly green, mucousy fluid suspended in a corked test tube, its contents almost giving off a glow.
+roomDescription=An odd liquid in a sealed vial sits by itself.
+Description=A sickly green, mucousy fluid suspended in a corked test tube, its contents almost giving off a glow.
 Power=0
 Healing=20
 weapon=0
